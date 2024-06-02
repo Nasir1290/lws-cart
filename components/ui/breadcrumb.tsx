@@ -4,7 +4,7 @@ import { TiHome } from 'react-icons/ti'
 
 export default function Breadcrumb({ current }: { current: string }) {
    return (
-      <div className="container py-4 flex items-center gap-3">
+      <div className="container py-4 flex items-center gap-3 print:hidden">
          <Link href="/" className="text-primary text-base">
             <TiHome className="text-xl" />
          </Link>

@@ -1,6 +1,8 @@
 import { auth } from '@/auth'
 import Breadcrumb from '@/components/ui/breadcrumb'
 import { getSingleOrder } from '@/server-actions/getSingleOrder'
+import { Locale } from '@/types/i18n'
+import { convertNumEnToBn } from '@/utils/convertNumEnToBn'
 import { getDateFormat } from '@/utils/getDateFormat'
 import { redirect } from 'next/navigation'
 
@@ -9,12 +11,18 @@ import InvoiceCard from './components/invoice-card'
 interface Props {
    params: {
       invoiceId: string
+      locale: Locale
    }
 }
 
-export default async function Invoice({ params: { invoiceId } }: Props) {
+export default async function Invoice({
+   params: { invoiceId, locale },
+}: Props) {
    const session = await auth()
-   if (!session) redirect(`/login?_redirect=invoice/${invoiceId}`)
+   if (!session) redirect(`/${locale}/login?_redirect=invoice/${invoiceId}`)
+   const bangla = await import('./components/bn.json')
+   const english = await import('./components/en.json')
+   const dict = locale === 'bn' ? bangla : english
 
    const order = await getSingleOrder(invoiceId)
 
@@ -30,13 +38,21 @@ export default async function Invoice({ params: { invoiceId } }: Props) {
 
    return (
       <>
-         <Breadcrumb current="Invoice" />
+         <Breadcrumb current={dict.invoice} />
          <div>
-            <InvoiceCard invoiceId={order.invoice}>
-               <div className="bg-white rounded-md md:p-16 p-10 container">
+            <InvoiceCard
+               dict={{
+                  print: dict.default.print,
+                  download: dict.default.download,
+               }}
+               invoiceId={order.invoice}
+            >
+               <div className="bg-white rounded-md md:p-16 p-10 container print:p-0 print:mt-5">
                   <div className="flex flex-wrap items-center justify-between gap-6">
                      <div>
-                        <span className="text-lg font-bold">Bill to:</span>
+                        <span className="text-lg font-bold">
+                           {dict.billTo}:
+                        </span>
                         <div className="mt-4 px-4 border-s-primary border-s-4">
                            <h4 className="text-base font-bold">
                               {order.shippingAddress.firstName +
@@ -70,8 +86,8 @@ export default async function Invoice({ params: { invoiceId } }: Props) {
                   </div>
 
                   <div className="flex items-center justify-between my-10">
-                     <h4 className="text-5xl font-semibold uppercase tracking-widest">
-                        Invoice{' '}
+                     <h4 className="text-5xl font-semibold uppercase tracking-widest print:text-2xl">
+                        {dict.invoice}{' '}
                         <span className="text-primary">#{order.invoice}</span>
                      </h4>
                      <div>
@@ -87,37 +103,51 @@ export default async function Invoice({ params: { invoiceId } }: Props) {
                      <table className="border-collapse table-auto w-full text-sm mt-10 whitespace-pre">
                         <thead>
                            <tr className="bg-gray-100">
-                              <th className="p-4 border border-e-0 uppercase text-lg font-medium text-start">
-                                 Product Description
+                              <th className="p-4 print:p-2 print:text-xs border border-e-0 uppercase text-lg font-medium text-start">
+                                 {dict.productDesc}
                               </th>
-                              <th className="p-4 border-y uppercase text-lg font-medium ">
-                                 Price
+                              <th className="p-4 print:p-2 print:text-xs border-y uppercase text-lg font-medium ">
+                                 {dict.price}
                               </th>
-                              <th className="p-4 pe-7 border-y uppercase text-lg font-medium">
-                                 Qty
+                              <th className="p-4 print:p-2 print:text-xs pe-7 border-y uppercase text-lg font-medium">
+                                 {dict.quantity}
                               </th>
-                              <th className="p-4 border border-s-0 uppercase text-lg font-medium">
-                                 Total
+                              <th className="p-4 print:p-2 print:text-xs border border-s-0 uppercase text-lg font-medium">
+                                 {dict.total}
                               </th>
                            </tr>
                         </thead>
                         <tbody className="bg-white">
                            {order.products.map((product) => (
                               <tr key={product._id}>
-                                 <td className="p-5 text-base font-medium border">
+                                 <td className="p-5 print:text-xs print:p-2 text-base font-medium border">
                                     {product.name}
                                  </td>
-                                 <td className="p-5 text-base font-medium border text-center">
-                                    BDT {product.price}{' '}
+                                 <td className="p-5 print:text-xs print:p-2 text-base font-medium border text-center">
+                                    {dict.currency}{' '}
+                                    {locale === 'bn'
+                                       ? convertNumEnToBn(product.price)
+                                       : product.price}{' '}
                                     <span className="text-sm text-gray-400">
-                                       ({product.discount}% OFF)
+                                       (
+                                       {locale === 'bn'
+                                          ? convertNumEnToBn(product.discount)
+                                          : product.discount}
+                                       % {dict.off})
                                     </span>
                                  </td>
-                                 <td className="p-5 text-base font-medium border text-center">
-                                    {product.quantity}
+                                 <td className="p-5 print:text-xs print:p-2 text-base font-medium border text-center">
+                                    {locale === 'bn'
+                                       ? convertNumEnToBn(product.quantity)
+                                       : product.quantity}
                                  </td>
-                                 <td className="p-5 text-base font-medium border text-center">
-                                    BDT {product.price * product.quantity}
+                                 <td className="p-5 print:text-xs print:p-2 text-base font-medium border text-center">
+                                    {dict.currency}{' '}
+                                    {locale === 'bn'
+                                       ? convertNumEnToBn(
+                                            product.price * product.quantity,
+                                         )
+                                       : product.price * product.quantity}
                                  </td>
                               </tr>
                            ))}
@@ -129,38 +159,56 @@ export default async function Invoice({ params: { invoiceId } }: Props) {
                                  colSpan={4}
                                  className="p-1 ps-5 text-base font-medium border"
                               >
-                                 comments
+                                 {dict.comments}
                               </td>
                            </tr>
                            <tr>
                               <td
                                  colSpan={3}
                                  rowSpan={3}
-                                 className="p-5 text-xl text-[#393939] font-semibold border  text-wrap"
+                                 className="p-5 print:p-2 print:text-sm text-xl text-[#393939] font-semibold border  text-wrap"
                               >
-                                 Thank you for shopping with us! <br />{' '}
+                                 {dict.comment1} <br />{' '}
                                  <span className="text-sm font-medium">
-                                    Life&apos;s too short to wear boring stuff -
-                                    <br /> so rock your new gear and own the
-                                    day!
+                                    {dict.comment2}
+                                    <br /> {dict.comment3}
                                  </span>
                               </td>
-                              <td className="p-5 text-base font-medium border text-center flex justify-between">
-                                 <b>Subtotal:</b>
-                                 <span>BDT {Math.round(subTotal)}</span>
-                              </td>
-                           </tr>
-                           <tr>
-                              <td className="p-5 text-base font-medium border text-center flex justify-between">
-                                 <b>Discount:</b>{' '}
-                                 <span>BDT {Math.round(discountTotal)}</span>
-                              </td>
-                           </tr>
-                           <tr>
-                              <td className="p-5 text-base font-medium border text-center text-emerald-500 flex justify-between">
-                                 <b>Total:</b>
+                              <td className="p-5 print:p-2 print:text-xs text-base font-medium border text-center flex justify-between">
+                                 <b>{dict.subTotal}:</b>
                                  <span>
-                                    BDT {Math.round(subTotal - discountTotal)}
+                                    {dict.currency}{' '}
+                                    {locale === 'bn'
+                                       ? convertNumEnToBn(Math.round(subTotal))
+                                       : Math.round(subTotal)}
+                                 </span>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td className="p-5 print:p-2 print:text-xs text-base font-medium border text-center flex justify-between">
+                                 <b>{dict.discount}:</b>{' '}
+                                 <span>
+                                    {dict.currency}{' '}
+                                    {locale === 'bn'
+                                       ? convertNumEnToBn(
+                                            Math.round(discountTotal),
+                                         )
+                                       : Math.round(discountTotal)}
+                                 </span>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td className="p-5 print:p-2 print:text-xs text-base font-medium border text-center text-emerald-500 flex justify-between">
+                                 <b>{dict.total}:</b>
+                                 <span>
+                                    {dict.currency}{' '}
+                                    {locale === 'bn'
+                                       ? convertNumEnToBn(
+                                            Math.round(
+                                               subTotal - discountTotal,
+                                            ),
+                                         )
+                                       : Math.round(subTotal - discountTotal)}
                                  </span>
                               </td>
                            </tr>

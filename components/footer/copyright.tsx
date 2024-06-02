@@ -8,7 +8,7 @@ export default async function Copyright({ locale }: { locale: Locale }) {
    const dict = locale === 'bn' ? bangla : english
 
    return (
-      <div className="bg-gray-800 py-4">
+      <div className="bg-gray-800 py-4 print:hidden">
          <div className="container flex items-center justify-between">
             <p className="text-white">{dict.copyright}</p>
             <div>

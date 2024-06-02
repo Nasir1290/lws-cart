@@ -11,7 +11,7 @@ export default async function Footer({ locale }: { locale: Locale }) {
    const dict = locale === 'bn' ? bangla : english
 
    return (
-      <footer className="border-t border-gray-100 bg-white pb-12 pt-16">
+      <footer className="border-t border-gray-100 bg-white pb-12 pt-16 print:hidden">
          <div className="container grid grid-cols-3">
             <div className="col-span-1 mr-2 space-y-8">
                <Image src={logo} alt="logo" className="w-40" />

@@ -1,0 +1,18 @@
+{
+   "print": "Print Invoice",
+   "download": "Download Invoice",
+   "subTotal": "Subtotal",
+   "off": "OFF",
+   "discount": "Discount",
+   "total": "Total",
+   "comments": "Comments",
+   "productDesc": "PRODUCT DESCRIPTION",
+   "price": "Price",
+   "quantity": "QTY",
+   "currency": "BDT",
+   "invoice": "Invoice",
+   "billTo": "Bill To",
+   "comment1": "Thank you for shopping with us!",
+   "comment2": "Life's too short to wear boring stuff -",
+   "comment3": "so rock your new gear and own the day!"
+}

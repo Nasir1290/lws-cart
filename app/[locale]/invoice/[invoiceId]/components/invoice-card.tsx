@@ -3,15 +3,20 @@
 import html2canvas from 'html2canvas'
 import jsPDF from 'jspdf'
 import { useRef } from 'react'
+import toast from 'react-hot-toast'
 
 import DownloadInvoice from './download-invoice'
 
 interface Props {
    invoiceId: string
    children: React.ReactNode
+   dict: {
+      print: string
+      download: string
+   }
 }
 
-export default function InvoiceCard({ invoiceId, children }: Props) {
+export default function InvoiceCard({ invoiceId, children, dict }: Props) {
    const invoiceRef = useRef<HTMLDivElement>(null)
 
    const generatePDF = async () => {
@@ -29,13 +34,13 @@ export default function InvoiceCard({ invoiceId, children }: Props) {
          pdf.addImage(imgData, 'PNG', 0, 30, imgWidth, imgHeight)
          pdf.save(`invoice-${invoiceId}.pdf`)
       } catch (error) {
-         console.error('Error generating PDF:', error)
+         toast.error('Error generating PDF')
       }
    }
 
    return (
       <>
-         <DownloadInvoice generatePDF={generatePDF} />
+         <DownloadInvoice dict={dict} generatePDF={generatePDF} />
          <div ref={invoiceRef}>{children}</div>
       </>
    )

@@ -21,7 +21,7 @@ export default async function Header({ locale }: Props) {
    const dict = locale === 'bn' ? bangla : english
 
    return (
-      <header className="py-4 shadow-sm bg-white">
+      <header className="py-4 shadow-sm bg-white print:hidden">
          {/* Sign out if failed refreshed Token. */}
          <RefreshTokenHandler />
          <div className="container flex items-center justify-between">

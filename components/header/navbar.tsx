@@ -12,9 +12,12 @@ export default async function Navbar({ locale }: { locale: Locale }) {
    const dict = locale === 'bn' ? bangla : english
 
    return (
-      <nav className="bg-gray-800">
+      <nav className="bg-gray-800 print:hidden">
          <div className="container flex">
-            <CategoryMenu locale={locale} allCategories={dict.default.allCategories} />
+            <CategoryMenu
+               locale={locale}
+               allCategories={dict.default.allCategories}
+            />
             <div className="flex items-center justify-between flex-grow pl-12">
                <div className="flex items-center space-x-6 capitalize">
                   <Link
