@@ -1,0 +1,16 @@
+{
+   "login": "প্রবেশ করুন",
+   "welcome": "স্বাগতম স্যার",
+   "dontHaveAccount": "একাউন্ট নেই?",
+   "register": "নিবন্ধন করুন",
+   "remember": "মনে রাখুন",
+   "forgotPassword": "পাসওয়ার্ড ভুলে গেছেন",
+   "connecting": "কানেক্ট হচ্ছে...",
+   "email": "ইমেইল ঠিকানা",
+   "password": "পাসওয়ার্ড",
+   "social": {
+      "orLoginWith": "অথবা প্রবেশ করুন",
+      "facebook": "ফেসবুক",
+      "google": "গুগল"
+   }
+}

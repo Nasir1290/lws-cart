@@ -1,0 +1,24 @@
+{
+   "heroBanner": {
+      "heading": "Transform Your Home with Our Premium Decor",
+      "description": "From luxurious sofas to smart gadgets, our collection has everything you need to design a home that reflects your style. Explore our high-quality products and transform your space today",
+      "button": "Shop Now"
+   },
+   "features": {
+      "freeShipping": {
+         "title": "Free Shipping",
+         "desc": "Order minimum BDT 500"
+      },
+      "moneyReturns": {
+         "title": "Money Returns",
+         "desc": "30 Days Money Returns"
+      },
+      "support": {
+         "title": "24/7 Support",
+         "desc": "Customer support"
+      }
+   },
+   "shopByCategory": { "title": "Shop By Category" },
+   "newArrival": { "title": "Top New Arrival" },
+   "trendingProducts": { "title": "Trending Products" }
+}

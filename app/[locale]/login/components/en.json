@@ -1,0 +1,16 @@
+{
+   "login": "Login",
+   "welcome": "Welcome Back Sir",
+   "dontHaveAccount": "Don't have account?",
+   "register": "Register now",
+   "remember": "Remember me",
+   "forgotPassword": "Forgot password",
+   "connecting": "Connecting...",
+   "email": "Email address",
+   "password": "Password",
+   "social": {
+      "orLoginWith": "Or login with",
+      "facebook": "Facebook",
+      "google": "Google"
+   }
+}

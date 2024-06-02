@@ -1,0 +1,19 @@
+{
+   "createAnAccount": "একটি অ্যাকাউন্ট তৈরি করুন",
+   "registerForNewCustomer": "নতুন গ্রাহকের জন্য নিবন্ধন করুন",
+   "fullName": "সম্পূর্ণ নাম",
+   "emailAddress": "ইমেইল ঠিকানা",
+   "password": "পাসওয়ার্ড",
+   "confirmPassword": "পাসওয়ার্ড নিশ্চিত করুন",
+   "agreement": "আমি পড়েছি এবং একমত হয়েছি",
+   "agreementLink": "শর্তাবলী",
+   "submit": "অ্যাকাউন্ট তৈরি করুন",
+   "creating": "তৈরি হচ্ছে...",
+   "alreadyHaveAccount": "ইতিমধ্যে অ্যাকাউন্ট আছে?",
+   "loginNow": "এখন লগইন করুন",
+   "social": {
+      "orLoginWith": "অথবা প্রবেশ করুন",
+      "facebook": "ফেসবুক",
+      "google": "গুগল"
+   }
+}

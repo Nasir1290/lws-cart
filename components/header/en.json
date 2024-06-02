@@ -1,0 +1,17 @@
+{
+   "navlinks": {
+      "home": "Home",
+      "shop": "Shop",
+      "aboutUs": "About Us",
+      "myOrders": "My Orders",
+      "login": "Login/Register"
+   },
+   "allCategories": "All Categories",
+   "header": {
+      "search": "Search",
+      "placeholder": "Type product name",
+      "account": "Account",
+      "cart": "Cart",
+      "wishlist": "Wishlist"
+   }
+}

@@ -1,0 +1,1162 @@
+[
+   {
+      "name": "Ultra HD Smart TV",
+      "description": "Experience the stunning visuals and vibrant colors of our Ultra HD Smart LED TV. Featuring advanced HDR technology and smart connectivity, it's perfect for your home entertainment.",
+      "features": [
+         "55-inch screen",
+         "4K Ultra HD resolution",
+         "HDR10+",
+         "Smart TV functionality",
+         "Voice control"
+      ],
+      "price": 90000,
+      "discount": 15,
+      "category": "Electronics",
+      "brand": "TechBrand",
+      "model": "TB-55UHDSMT",
+      "color": "Black",
+      "tags": ["TV", "LED", "4K", "Electronics"],
+      "stockQuantity": 5,
+      "unitsSold": 10,
+      "launchDate": "2024-05-17T15:48:26.733Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/81pL+uVYD3L._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71pSYE0G7OL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/61NDSkmJfdS._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/711wmNMFkLL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71lQXS-yl2L._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "Luxe Sectional Sofa",
+      "description": "Elevate your living space with our Luxe Velvet Sectional Sofa. Crafted with sumptuous velvet upholstery and plush cushioning, this sofa offers unparalleled comfort and style. Its spacious design makes it perfect for entertaining guests or lounging with family.",
+      "features": [
+         "Velvet upholstery",
+         "Plush cushioning",
+         "Spacious design",
+         "Sectional configuration",
+         "Sturdy wooden frame"
+      ],
+      "price": 75000,
+      "discount": 10,
+      "category": "Sofa",
+      "brand": "ComfortLiving",
+      "model": "CV-SF001",
+      "color": "Blue",
+      "tags": ["Sofa", "Velvet", "Luxury"],
+      "stockQuantity": 7,
+      "unitsSold": 5,
+      "launchDate": "2024-05-16T14:35:42.512Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/81fHvpFjCkL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71Kx6mPSN+L._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/718mBreCZjL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71dxtK41sDL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/712PhoDAhiL._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "French Door Refrigerator",
+      "description": "Introducing our Premium French Door Refrigerator, designed to meet all your food storage needs while adding elegance to your kitchen. With ample space, adjustable shelves, and advanced cooling technology, it ensures your food stays fresh longer. Its sleek design and stainless steel finish complement any modern kitchen decor.",
+      "features": [
+         "French door design",
+         "Stainless steel finish",
+         "Adjustable shelves",
+         "Advanced cooling technology",
+         "LED lighting"
+      ],
+      "price": 140000,
+      "discount": 8,
+      "category": "Electronics",
+      "brand": "CoolTech",
+      "model": "CT-RF450",
+      "color": "Steel",
+      "tags": ["Refrigerator", "Electronics", "Fridge"],
+      "stockQuantity": 8,
+      "unitsSold": 12,
+      "launchDate": "2024-05-15T13:22:58.491Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/61x64u2sSiL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71K02hCxh0L._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/61e4F-z9ZaL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71cx3XVzamL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71QxSDxlXlL._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "King-Size Foam Mattress",
+      "description": "Indulge in luxurious comfort with our King-Size Memory Foam Mattress. Engineered with premium memory foam, it contours to your body's shape, providing exceptional support and pressure relief. Say goodbye to restless nights and hello to rejuvenating sleep.",
+      "features": [
+         "Memory foam construction",
+         "King-size",
+         "Pressure-relieving design",
+         "Hypoallergenic",
+         "Breathable fabric cover"
+      ],
+      "price": 8000,
+      "discount": 12,
+      "category": "Bed",
+      "brand": "DreamComfort",
+      "model": "DC-MF900",
+      "color": "White",
+      "tags": ["Foam", "Comfort", "bed"],
+      "stockQuantity": 10,
+      "unitsSold": 10,
+      "launchDate": "2024-05-14T12:10:14.345Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/91MV+vksmnL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/61m64unFNQL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/61XRJMl5z1L._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71ttXT6rk2S._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81dA2-FsYCL._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "7-Piece Dining Set",
+      "description": "Upgrade your dining area with our Modern 7-Piece Dining Set. Featuring a sleek table and six chairs upholstered in premium fabric, it's perfect for family meals or entertaining guests. The sturdy construction and contemporary design make it a stylish addition to any home.",
+      "features": [
+         "7-piece set",
+         "Sleek dining table",
+         "Six upholstered chairs",
+         "Sturdy construction",
+         "Contemporary design"
+      ],
+      "price": 80000,
+      "discount": 15,
+      "category": "Furniture",
+      "brand": "UrbanLiving",
+      "model": "UL-DT700",
+      "color": "Gray",
+      "tags": ["Dining Set", "Furniture", "7-Piece", "Chair", "Table"],
+      "stockQuantity": 20,
+      "unitsSold": 18,
+      "launchDate": "2024-05-13T11:05:31.224Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/A1ATz+GO11L._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/91AH4BD-1WL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71oJawhD3sL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/91ZA15i5qFL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/715mpVvTA0L._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "Canopy Bed Frame",
+      "description": "Transform your bedroom into a luxurious retreat with our Grand Canopy Bed Frame. Crafted from durable hardwood and featuring elegant canopy drapes, it exudes opulence and sophistication. Whether you're lounging or sleeping, this bed adds a touch of regal charm to your space.",
+      "features": [
+         "Canopy bed frame",
+         "Durable hardwood construction",
+         "Elegant canopy drapes",
+         "Regal design",
+         "Easy to assemble"
+      ],
+      "price": 45000,
+      "discount": 10,
+      "category": "Bed",
+      "brand": "RoyalSleep",
+      "model": "RS-BF800",
+      "color": "Wood",
+      "tags": ["Bed", "Grand", "Bed Frame"],
+      "stockQuantity": 4,
+      "unitsSold": 7,
+      "launchDate": "2024-05-12T10:45:16.189Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/81Nhpkm7R5L._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71KXBpyggfL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71qXt19q-VL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71mzwXKzVcL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/913RBumYrRL._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "Rustic Coffee Table",
+      "description": "Add a touch of rustic charm to your living room with our Farmhouse Coffee Table. Crafted from reclaimed wood and featuring a distressed finish, it brings warmth and character to any space. With ample storage and a sturdy design, it's as functional as it is stylish.",
+      "features": [
+         "Rustic farmhouse design",
+         "Reclaimed wood construction",
+         "Distressed finish",
+         "Ample storage space",
+         "Sturdy build"
+      ],
+      "price": 20000,
+      "discount": 10,
+      "category": "Table",
+      "brand": "CountryHome",
+      "model": "CH-CT200",
+      "color": "Wood",
+      "tags": ["Coffee Table", "Furniture", "Rustic", "Table"],
+      "stockQuantity": 9,
+      "unitsSold": 9,
+      "launchDate": "2024-05-11T09:32:54.773Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/A1CEqzjg1EL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81f9FAJn7NL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/91RFYOLzeNL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81kD08LuwCL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81HmzfLdBpL._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "Home Theater System",
+      "description": "Immerse yourself in cinematic sound with our Premium Home Theater System. Featuring high-fidelity speakers and Dolby Atmos technology, it delivers a captivating audio experience. Whether you're watching movies or listening to music, this system brings entertainment to life.",
+      "features": [
+         "High-fidelity speakers",
+         "Dolby Atmos technology",
+         "Wireless connectivity",
+         "Surround sound",
+         "Easy setup"
+      ],
+      "price": 25000,
+      "discount": 8,
+      "category": "Electronics",
+      "brand": "SoundScape",
+      "model": "SS-HT850",
+      "color": "Black",
+      "tags": ["Theater", "Audio", "Cinema", "Wireless", "Electronics"],
+      "stockQuantity": 12,
+      "unitsSold": 8,
+      "launchDate": "2024-05-10T08:20:37.658Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/81xvwMwn9cS._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71DDqrs+7QL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81ANdw1cxIL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81JQTkmMiPL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81i4ldM7o4S._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "Smart AI Refrigerator",
+      "description": "Upgrade your kitchen with our Smart Refrigerator featuring AI technology. With built-in sensors, it learns your usage patterns and suggests recipes based on available ingredients. Stay organized and reduce food waste with this innovative appliance.",
+      "features": [
+         "AI technology",
+         "Built-in sensors",
+         "Recipe suggestions",
+         "Energy-efficient",
+         "Touchscreen display"
+      ],
+      "price": 200000,
+      "discount": 5,
+      "category": "Electronics",
+      "brand": "SmartKitchen",
+      "model": "SK-RF2000",
+      "color": "Steel",
+      "tags": ["Refrigerator", "AI", "Fridge", "Touchscreen", "Electronics"],
+      "stockQuantity": 8,
+      "unitsSold": 5,
+      "launchDate": "2024-05-09T07:15:28.941Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/51SYrKVJkHL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71aEe0UPSlL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/51dv5UgAtgL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/51pJ1txo8yL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/51G6df-ciiL._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "Adjustable Bed Frame",
+      "description": "Experience personalized comfort with our King-Size Adjustable Bed Frame. With customizable positions and massage features, it's perfect for improving sleep quality and relieving discomfort. Transform your bedroom into a sanctuary of relaxation.",
+      "features": [
+         "Adjustable positions",
+         "Massage function",
+         "Wireless remote",
+         "Memory presets",
+         "Easy assembly"
+      ],
+      "price": 90000,
+      "discount": 15,
+      "category": "Bed",
+      "brand": "ComfortRest",
+      "model": "CR-AB1000",
+      "color": "Gray",
+      "tags": ["Bed", "Bed Frame", "Massage", "Comfort"],
+      "stockQuantity": 10,
+      "unitsSold": 6,
+      "launchDate": "2024-05-08T06:05:14.623Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/91-LvzVlPLL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71QzD6pgLEL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/61HKBiEP4+L._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/51z3eXjzxYL._AC_.jpg",
+         "https://m.media-amazon.com/images/I/71w9HnB93uL._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "Luxury Sectional Sofa",
+      "description": "Create a luxurious lounging area with our Luxury Velvet Sectional Sofa. Upholstered in plush velvet and featuring deep seats, it offers both comfort and style. Whether you're entertaining guests or relaxing with family, this sofa is sure to impress.",
+      "features": [
+         "Plush velvet upholstery",
+         "Deep seats",
+         "Spacious design",
+         "Tufted detailing",
+         "Sturdy wooden legs"
+      ],
+      "price": 375000,
+      "discount": 12,
+      "category": "Sofa",
+      "brand": "OpulentLiving",
+      "model": "OL-SF200",
+      "color": "Green",
+      "tags": ["Sofa", "Luxury"],
+      "stockQuantity": 7,
+      "unitsSold": 9,
+      "launchDate": "2024-05-07T05:58:47.432Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/81Ag2IBTrfL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/91ti1+M5GcL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/91lcFfLrofL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71OezCMUTPL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71gbcnwhZpL._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "3-Piece Fabric Sectional",
+      "description": "Upgrade your living room with our Modern 3-Piece Fabric Sectional. Featuring clean lines and plush cushions, it offers both style and comfort. The chaise lounge allows for versatile seating arrangements, perfect for lounging or entertaining guests.",
+      "features": [
+         "3-piece sectional",
+         "Soft fabric upholstery",
+         "Plush cushions",
+         "Chaise lounge",
+         "Sturdy wood frame"
+      ],
+      "price": 150000,
+      "discount": 10,
+      "category": "Sofa",
+      "brand": "ModernHome",
+      "model": "MH-SF300",
+      "color": "Gray",
+      "tags": ["Sofa", "Sectional", "Comfort"],
+      "stockQuantity": 10,
+      "unitsSold": 7,
+      "launchDate": "2024-05-06T04:45:23.891Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/81Cm6d0sFmL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/711MzycYYaL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81EvBmEKlAL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71m4nvOPnLL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/613TjGz6oFL._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "Smart Security Camera",
+      "description": "Keep your home safe and secure with our Smart Home Security Camera System. Featuring HD cameras, motion detection, and remote access, you can monitor your property from anywhere. Get instant alerts and peace of mind knowing your home is protected.",
+      "features": [
+         "HD cameras",
+         "Motion detection",
+         "Remote access",
+         "Two-way audio",
+         "Easy installation"
+      ],
+      "price": 465000,
+      "discount": 8,
+      "category": "Electronics",
+      "brand": "SecureGuard",
+      "model": "SG-CAM100",
+      "color": "White",
+      "tags": [
+         "Security Camera",
+         "Electronics",
+         "Safety",
+         "Camera",
+         "Remote Monitoring"
+      ],
+      "stockQuantity": 11,
+      "unitsSold": 15,
+      "launchDate": "2024-05-05T03:33:11.782Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/71xd-WbKO6L._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/61MUAeSSUYL._AC_SL1200_.jpg",
+         "https://m.media-amazon.com/images/I/814dFS2PWmL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81Yb5ga97GL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/61k3LNTEtSL._AC_SL1000_.jpg"
+      ]
+   },
+   {
+      "name": "Queen-Size Bed Frame",
+      "description": "Transform your bedroom into a haven of elegance with our Elegant Queen-Size Bed Frame. Crafted from solid wood and featuring intricate detailing, it adds sophistication to any space. Get ready to enjoy nights of restful sleep in style.",
+      "features": [
+         "Solid wood construction",
+         "Queen-size",
+         "Intricate detailing",
+         "Sturdy support",
+         "Easy assembly"
+      ],
+      "price": 87000,
+      "discount": 15,
+      "category": "Bed",
+      "brand": "RoyalSleep",
+      "model": "RS-BF300",
+      "color": "Wood",
+      "tags": ["Bed Frame", "Queen-size", "Wooden", "Bed"],
+      "stockQuantity": 15,
+      "unitsSold": 10,
+      "launchDate": "2024-05-04T02:22:58.671Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/81QoqLlr6LL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/715Xvusy0AL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81bTMs13jAL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81JcSBVIxoL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81TihB2H2KL._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "Marble Dining Table",
+      "description": "Make a statement in your dining room with our Stylish Marble Dining Table. Featuring a sleek marble top and sturdy base, it combines elegance with durability. Gather your family and friends for memorable meals around this stunning centerpiece.",
+      "features": [
+         "Marble top",
+         "Sturdy base",
+         "Seats six",
+         "Easy to clean",
+         "Timeless design"
+      ],
+      "price": 115000,
+      "discount": 10,
+      "category": "Table",
+      "brand": "UrbanElegance",
+      "model": "UE-DT400",
+      "color": "White",
+      "tags": ["Dining Table", "Marble", "Table", "Durable"],
+      "stockQuantity": 12,
+      "unitsSold": 8,
+      "launchDate": "2024-05-03T01:10:45.567Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/81j8-ayo+vL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81ktF-GS0oL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/61tx+9QzPkL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81p1-O1xAML._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/817HKEn4E8L._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "Smart Door Lock",
+      "description": "Enhance your home security with our Smart Door Lock featuring a fingerprint scanner. Say goodbye to keys and hello to convenient access. With multiple access methods and remote control, you can manage your door security effortlessly.",
+      "features": [
+         "Fingerprint scanner",
+         "Keyless entry",
+         "Remote control",
+         "Auto-locking",
+         "Easy installation"
+      ],
+      "price": 7000,
+      "discount": 10,
+      "category": "Home Decor",
+      "brand": "SecureHome",
+      "model": "SH-DL200",
+      "color": "Black",
+      "tags": ["Smart Lock", "Security", "Home Decor", "Fingerprint", "Safety"],
+      "stockQuantity": 15,
+      "unitsSold": 12,
+      "launchDate": "2024-05-02T00:55:32.456Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/711Kr0J0RPL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71Yg85LcURL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71eINMM4HjL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71LnvNfsFsL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71WY0q702SL._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "Ultra-Soft Throw Blanket",
+      "description": "Wrap yourself in luxurious warmth with our Ultra-Soft Plush Throw Blanket. Made from premium fleece, it's perfect for cozying up on chilly nights. Whether you're watching TV or reading a book, this blanket is a must-have addition to your home.",
+      "features": [
+         "Premium fleece material",
+         "Extra soft and cozy",
+         "Lightweight yet warm",
+         "Generous size",
+         "Easy to care for"
+      ],
+      "price": 5000,
+      "discount": 5,
+      "category": "Bed",
+      "brand": "CozyComfort",
+      "model": "CC-BLANKET100",
+      "color": "Gray",
+      "tags": ["Throw Blanket", "Bed", "Blanket", "Warm"],
+      "stockQuantity": 14,
+      "unitsSold": 35,
+      "launchDate": "2024-05-01T23:44:21.345Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/71xktBDdTCL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71EO5j1W9DL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81kI5Fgp2EL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/710ENg612FL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71a5bykztML._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "Glass Coffee Table",
+      "description": "Add a touch of modern elegance to your living room with our Minimalist Glass Coffee Table. Crafted with tempered glass and sleek metal legs, it's both stylish and durable. Its minimalist design complements any decor style, making it a versatile choice for your home.",
+      "features": [
+         "Tempered glass tabletop",
+         "Sleek metal legs",
+         "Minimalist design",
+         "Easy to assemble",
+         "Versatile use"
+      ],
+      "price": 55000,
+      "discount": 5,
+      "category": "Table",
+      "brand": "ModernLiving",
+      "model": "ML-CT300",
+      "color": "Glass",
+      "tags": ["Coffee Table", "Table", "Modern", "Versatile"],
+      "stockQuantity": 4,
+      "unitsSold": 18,
+      "launchDate": "2024-04-30T22:33:10.234Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/91cTZVQORnL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/61h88ChoCGL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71bhZMRcx2L._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81XBj69pz5L._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81tkerw0YRL._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "WiFi Light Bulb",
+      "description": "Illuminate your home with our Smart WiFi Light Bulb. Compatible with voice control and app control, you can adjust the brightness and color temperature with ease. Create the perfect ambiance for any occasion with this innovative lighting solution.",
+      "features": [
+         "WiFi-enabled",
+         "Voice control compatible",
+         "Adjustable brightness",
+         "Color temperature control",
+         "Energy-efficient"
+      ],
+      "price": 9600,
+      "discount": 10,
+      "category": "Lighting",
+      "brand": "SmartGlow",
+      "model": "SG-LB100",
+      "color": "White",
+      "tags": ["Bulb", "WiFi", "Lighting", "Smart", "Light"],
+      "stockQuantity": 30,
+      "unitsSold": 25,
+      "launchDate": "2024-04-29T21:22:59.123Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/714s-0UNMML._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/61nBCIiXssL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81zGZwGJOLL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71fvch22cxL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81uvx7+GSzL._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "Edison Pendant Light",
+      "description": "Add a touch of vintage charm to your space with our Vintage Edison Bulb Pendant Light. Featuring an antique-inspired design and adjustable cord length, it's perfect for illuminating dining areas, kitchens, or living rooms. Enhance your decor with this timeless lighting fixture.",
+      "features": [
+         "Vintage Edison bulb",
+         "Adjustable cord length",
+         "Antique-inspired design",
+         "Easy installation",
+         "Creates warm ambiance"
+      ],
+      "price": 16000,
+      "discount": 5,
+      "category": "Lighting",
+      "brand": "RetroGlow",
+      "model": "RG-PD200",
+      "color": "Antique Brass",
+      "tags": ["Light", "Lighting", "Bulb", "Antique"],
+      "stockQuantity": 8,
+      "unitsSold": 15,
+      "launchDate": "2024-04-28T20:11:48.012Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/71eJdllPS-L._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81C51fr+oQL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/718RVol45pL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71-05TXAtKL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/61YjkkPXKqL._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "Contemporary Dining Chair",
+      "description": "Upgrade your dining experience with our Contemporary Upholstered Dining Chair. Featuring a sleek design and comfortable cushioning, it's perfect for long meals and gatherings. With its versatile style, it complements a range of dining table designs.",
+      "features": [
+         "Upholstered seat and back",
+         "Sturdy metal legs",
+         "Contemporary design",
+         "Comfortable cushioning",
+         "Easy to clean"
+      ],
+      "price": 130000,
+      "discount": 12,
+      "category": "Furniture",
+      "brand": "ModernComfort",
+      "model": "MC-DC400",
+      "color": "Gray",
+      "tags": [
+         "Dining Chair",
+         "Chair",
+         "Upholstered",
+         "Comfortable",
+         "Furniture"
+      ],
+      "stockQuantity": 35,
+      "unitsSold": 28,
+      "launchDate": "2024-05-14T07:23:45.567Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/61dBX9Zk8NL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/814IxCSv3WL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/61GDKk+oG2L._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/61ZTmYsVcHL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/91hEN2Tv-+L._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "Luxury Accent Chair",
+      "description": "Make a statement in any room with our Luxury Velvet Accent Chair. Upholstered in sumptuous velvet and featuring a bold silhouette, it adds a touch of glamour to your space. Sink into its plush cushions and indulge in comfort and style.",
+      "features": [
+         "Sumptuous velvet upholstery",
+         "Bold silhouette",
+         "Plush cushions",
+         "Sturdy wooden legs",
+         "Easy assembly"
+      ],
+      "price": 55000,
+      "discount": 20,
+      "category": "Furniture",
+      "brand": "ElegantLiving",
+      "model": "EL-AC100",
+      "color": "Green",
+      "tags": ["Accent Chair", "Furniture", "Chair"],
+      "stockQuantity": 15,
+      "unitsSold": 12,
+      "launchDate": "2024-05-12T16:34:12.345Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/61qkfUOkNpL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/51+dXoXseQL._AC_SL1230_.jpg",
+         "https://m.media-amazon.com/images/I/6173DC9uETL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/6173DC9uETL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/61RDnuckd5L._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "Glass Dining Table",
+      "description": "Upgrade your dining room with our Modern Glass Top Dining Table. Featuring a sleek glass top and chrome legs, it adds contemporary flair to any space. Gather your family and friends for stylish meals around this elegant centerpiece.",
+      "features": [
+         "Tempered glass tabletop",
+         "Chrome legs",
+         "Contemporary design",
+         "Seats six",
+         "Easy assembly"
+      ],
+      "price": 75000,
+      "discount": 10,
+      "category": "Table",
+      "brand": "UrbanChic",
+      "model": "UC-DT200",
+      "color": "Glass",
+      "tags": ["Dining Table", "Glass Top", "Table"],
+      "stockQuantity": 20,
+      "unitsSold": 18,
+      "launchDate": "2024-05-05T03:47:58.123Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/81c7ZfjmSlL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/718NGALld1L._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71adn7YDirL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71bbZBfuCeL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81D9PwMxM5L._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "Wood Console Table",
+      "description": "Add a touch of rustic charm to your entryway or living room with our Rustic Wood Console Table. Crafted from solid wood with distressed detailing, it offers both style and functionality. Display your favorite decor pieces or use it as a convenient storage solution.",
+      "features": [
+         "Solid wood construction",
+         "Distressed finish",
+         "Spacious tabletop",
+         "Lower shelf for storage",
+         "Easy to assemble"
+      ],
+      "price": 33000,
+      "discount": 5,
+      "category": "Table",
+      "brand": "CountryHome",
+      "model": "CH-CT300",
+      "color": "Wood",
+      "tags": ["Console Table", "Console", "Wood", "Table"],
+      "stockQuantity": 25,
+      "unitsSold": 20,
+      "launchDate": "2024-05-09T21:15:37.789Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/61ppEHvGhIL._AC_SL1200_.jpg",
+         "https://m.media-amazon.com/images/I/71ZwqKg+W7L._AC_SL1200_.jpg",
+         "https://m.media-amazon.com/images/I/61MnFQimsTL._AC_SL1200_.jpg",
+         "https://m.media-amazon.com/images/I/81FI1uubn5L._AC_SL1200_.jpg",
+         "https://m.media-amazon.com/images/I/718QeKB+EZL._AC_SL1200_.jpg"
+      ]
+   },
+   {
+      "name": "LED Floor Lamp",
+      "description": "Illuminate your space with our Smart LED Floor Lamp. Featuring adjustable brightness and color temperature, it's perfect for reading, working, or relaxing. With its sleek design and smart features, it's a stylish addition to any modern home.",
+      "features": [
+         "Adjustable brightness",
+         "Color temperature control",
+         "Smart connectivity",
+         "Energy-efficient LED",
+         "Minimalist design"
+      ],
+      "price": 12000,
+      "discount": 8,
+      "category": "Lighting",
+      "brand": "BrightTech",
+      "model": "BT-LAMP100",
+      "color": "White",
+      "tags": ["Floor Lamp", "Lamp", "LED", "Bulb", "Light", "Lighting"],
+      "stockQuantity": 30,
+      "unitsSold": 25,
+      "launchDate": "2024-05-01T14:22:33.456Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/91rQE-gstsL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71E8ecnysQL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71UGQpZF-NL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81n9lTkvUzL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81KhgQM8DGL._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "Luxury Velvet Ottoman",
+      "description": "Add a touch of opulence to your living space with our Luxury Velvet Ottoman. Upholstered in sumptuous velvet and featuring a tufted design, it serves as a stylish accent piece and a convenient footrest. Elevate your home decor with this elegant addition.",
+      "features": [
+         "Sumptuous velvet upholstery",
+         "Tufted design",
+         "Sturdy wooden legs",
+         "Versatile use",
+         "Easy assembly"
+      ],
+      "price": 21000,
+      "discount": 10,
+      "category": "Sofa",
+      "brand": "RegalLiving",
+      "model": "RL-OT200",
+      "color": "Blue",
+      "tags": ["Ottoman", "Accent", "Sofa"],
+      "stockQuantity": 6,
+      "unitsSold": 15,
+      "launchDate": "2024-05-11T10:55:21.678Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/718EqK5QFuL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71Td6BiBpfL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/61EzgDyx+rL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/61zNdCUAHzL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71U2XkJRpML._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "Patio Furniture Set",
+      "description": "Upgrade your outdoor space with our Modern 6-Piece Patio Furniture Set. Crafted with weather-resistant materials and featuring comfortable cushions, it's perfect for lounging or entertaining guests. Enjoy the sun in style with this sleek and durable furniture ensemble.",
+      "features": [
+         "Weather-resistant materials",
+         "Includes sofa, chairs, and table",
+         "Comfortable cushions",
+         "Easy to clean",
+         "Stylish design"
+      ],
+      "price": 245000,
+      "discount": 27,
+      "category": "Furniture",
+      "brand": "OutdoorLiving",
+      "model": "OL-PF600",
+      "color": "Gray",
+      "tags": ["Patio Furniture", "Furniture", "Outdoor Set"],
+      "stockQuantity": 15,
+      "unitsSold": 10,
+      "launchDate": "2024-05-03T08:44:10.234Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/9100CEAJFQL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81N1JVREo+L._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/916krIHT8JL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/917K1ZLjYLL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/91yzzYfr-gL._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "Industrial Bookshelf",
+      "description": "Organize your books and display your favorite decor items with our Vintage Industrial Bookshelf. Constructed with sturdy metal and rustic wood, it adds a touch of vintage charm to any room. Whether in your living room, office, or bedroom, this bookshelf combines style and functionality seamlessly.",
+      "features": [
+         "Sturdy metal frame",
+         "Rustic wood shelves",
+         "Industrial design",
+         "Ample storage space",
+         "Easy to assemble"
+      ],
+      "price": 78000,
+      "discount": 5,
+      "category": "Furniture",
+      "brand": "RetroHome",
+      "model": "RH-BS200",
+      "color": "Black",
+      "tags": ["Bookshelf", "Furniture"],
+      "stockQuantity": 25,
+      "unitsSold": 18,
+      "launchDate": "2024-05-15T19:11:49.567Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/81k7Ym0jDJL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/61vMVmQfXNL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81AAgUChHuL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/819rYnp4MpL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/717V6GOdDoL._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "Wi-Fi Thermostat",
+      "description": "Take control of your home's climate with our Smart Wi-Fi Thermostat. With remote access and intelligent scheduling, you can optimize energy usage and stay comfortable year-round. Compatible with voice assistants, it offers convenience and efficiency at your fingertips.",
+      "features": [
+         "Wi-Fi connectivity",
+         "Remote access",
+         "Intelligent scheduling",
+         "Energy-saving features",
+         "Voice assistant compatible"
+      ],
+      "price": 9000,
+      "discount": 8,
+      "category": "Electronics",
+      "brand": "SmartClimate",
+      "model": "SC-TS100",
+      "color": "White",
+      "tags": ["Thermostat", "Smart", "Wi-Fi", "Electronics", "Convenient"],
+      "stockQuantity": 2,
+      "unitsSold": 22,
+      "launchDate": "2024-05-07T12:05:56.890Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/51qozB9MtpL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/51Zz9eMkmXL._AC_SL1000_.jpg",
+         "https://m.media-amazon.com/images/I/51Rxj1VKkdL._AC_SL1000_.jpg",
+         "https://m.media-amazon.com/images/I/61moxfo4wOL._AC_SL1000_.jpg",
+         "https://m.media-amazon.com/images/I/61A1xUpg-QL._AC_SL1000_.jpg"
+      ]
+   },
+   {
+      "name": "Indoor/Outdoor Rug",
+      "description": "Bring coastal vibes to your indoor or outdoor space with our Coastal Stripe Rug. Made from durable materials, it's resistant to fading and easy to clean. The striped design adds a touch of nautical charm to your decor, making it perfect for beachside homes or coastal-themed interiors.",
+      "features": [
+         "Durable and weather-resistant",
+         "Easy to clean",
+         "Fade-resistant",
+         "Suitable for indoor and outdoor use",
+         "Nautical stripe design"
+      ],
+      "price": 16000,
+      "discount": 10,
+      "category": "Home Decor",
+      "brand": "CoastalLiving",
+      "model": "CL-RUG300",
+      "color": "Blue",
+      "tags": ["Rug", "Indoor/Outdoor", "Coastal", "Home Decor", "Durable"],
+      "stockQuantity": 6,
+      "unitsSold": 32,
+      "launchDate": "2024-05-13T05:29:18.345Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/A1MkjBKkwbL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/A1PAFn2qnLL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/A1OeZRP9KrL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/91Qx9vfS55L._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/91Qph4mTqBL._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "Mirror with Shelf",
+      "description": "Add style and functionality to your space with our Modern Wall Mirror. Featuring a sleek design and a built-in shelf, it's perfect for entryways, bathrooms, or living rooms. Reflect light and elevate your decor with this versatile and chic mirror.",
+      "features": [
+         "Sleek modern design",
+         "Built-in shelf for storage",
+         "Easy to hang",
+         "High-quality mirror",
+         "Versatile use"
+      ],
+      "price": 23000,
+      "discount": 5,
+      "category": "Home Decor",
+      "brand": "ModernMirrors",
+      "model": "MM-MR200",
+      "color": "Black",
+      "tags": ["Wall Mirror", "Modern", "Shelf", "Versatile", "Home Decor"],
+      "stockQuantity": 20,
+      "unitsSold": 15,
+      "launchDate": "2024-05-04T14:32:19.678Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/91IcfOangeL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81fPHTfCCWL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71aqE3ozTpL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81lssI7jgnL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71EN1ZodOtL._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "Throw Pillow Covers",
+      "description": "Add a touch of luxury to your sofa or bed with our Luxury Velvet Throw Pillow Covers. Made from premium velvet fabric and featuring elegant piping details, these pillow covers elevate any space. Mix and match colors to create your own custom look.",
+      "features": [
+         "Premium velvet fabric",
+         "Elegant piping details",
+         "Hidden zipper closure",
+         "Available in multiple colors",
+         "Easy to care for"
+      ],
+      "price": 3000,
+      "discount": 0,
+      "category": "Bed",
+      "brand": "VelvetVogue",
+      "model": "VV-TPC100",
+      "color": "Various",
+      "tags": ["Pillow Covers", "Velvet", "Luxury", "Elegant", "Bed"],
+      "stockQuantity": 50,
+      "unitsSold": 40,
+      "launchDate": "2024-05-08T22:11:43.901Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/81Pv+Fj7eVL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81hKkrFHKRL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81liFYen82L._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81koM1PlQQL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81dy3oGlFuL._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "Portable Outdoor Hammock",
+      "description": "Relax in style wherever you go with our Portable Outdoor Hammock with Stand. Easy to assemble and transport, it's perfect for camping trips, beach outings, or simply lounging in your backyard. Made from durable materials, it provides comfort and stability wherever you hang it.",
+      "features": [
+         "Durable hammock fabric",
+         "Sturdy steel stand",
+         "Portable and lightweight",
+         "Easy to assemble",
+         "Comfortable and spacious"
+      ],
+      "price": 7000,
+      "discount": 15,
+      "category": "Outdoor",
+      "brand": "OutdoorRelax",
+      "model": "OR-HK200",
+      "color": "Blue",
+      "tags": ["Hammock", "Portable", "Outdoor", "Relaxation", "Travel"],
+      "stockQuantity": 30,
+      "unitsSold": 25,
+      "launchDate": "2024-05-06T06:55:27.432Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/71RemoG0isL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81+A13fsKTL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/814m96demyL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71SKJ+EF2KL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81rQAb4-ByL._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "Wooden Wall Clock",
+      "description": "Add a rustic touch to your home decor with our Rustic Wooden Wall Clock. Crafted from reclaimed wood and featuring distressed details, it brings warmth and character to any space. The large numerals and silent quartz movement make it both functional and stylish.",
+      "features": [
+         "Reclaimed wood construction",
+         "Distressed finish",
+         "Large numerals for easy reading",
+         "Silent quartz movement",
+         "Easy to hang"
+      ],
+      "price": 2000,
+      "discount": 10,
+      "category": "Home Decor",
+      "brand": "RusticDecor",
+      "model": "RD-WC300",
+      "color": "Wood",
+      "tags": ["Wall Clock", "Wooden", "Home Decor"],
+      "stockQuantity": 20,
+      "unitsSold": 15,
+      "launchDate": "2024-05-02T18:45:34.567Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/61oQ5FWXOML._AC_SL1000_.jpg",
+         "https://m.media-amazon.com/images/I/71X0ROqQ2uL._AC_SL1000_.jpg",
+         "https://m.media-amazon.com/images/I/71NjC3boBNL._AC_SL1000_.jpg",
+         "https://m.media-amazon.com/images/I/717tglUX5qL._AC_SL1000_.jpg",
+         "https://m.media-amazon.com/images/I/61k4ipZbHzL._AC_SL1000_.jpg"
+      ]
+   },
+   {
+      "name": "Geometric Area Rug",
+      "description": "Enhance your floors with our Modern Geometric Area Rug. Featuring a contemporary geometric pattern and soft pile, it adds visual interest and comfort to any room. Made from high-quality materials, it's durable and easy to maintain.",
+      "features": [
+         "Contemporary geometric pattern",
+         "Soft and comfortable pile",
+         "Stain-resistant and easy to clean",
+         "Suitable for high-traffic areas",
+         "Non-shedding fibers"
+      ],
+      "price": 120,
+      "discount": 8,
+      "category": "Home Decor",
+      "brand": "ModernRugs",
+      "model": "MR-GR400",
+      "color": "Gray",
+      "tags": ["Area Rug", "Geometric", "Modern", "Contemporary", "Home Decor"],
+      "stockQuantity": 13,
+      "unitsSold": 30,
+      "launchDate": "2024-05-10T13:23:56.789Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/A1WZLKInWxL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/91m04yegTHL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/A1lvGQ+J7aS._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/A1ReWDl8MzL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/A1OnNP-Q5hL._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "Ceramic Plant Pots",
+      "description": "Bring a touch of nature indoors with our Set of 4 Ceramic Plant Pots with Tray. Perfect for succulents, herbs, or small plants, they add greenery to any space. The tray keeps them organized and makes watering easy, while the modern design adds style to your home decor.",
+      "features": [
+         "Set of 4 ceramic plant pots",
+         "Includes drainage holes",
+         "Comes with a matching tray",
+         "Ideal for indoor plants",
+         "Modern design"
+      ],
+      "price": 40,
+      "discount": 0,
+      "category": "Home Decor",
+      "brand": "UrbanGarden",
+      "model": "UG-PP400",
+      "color": "White",
+      "tags": ["Plant Pots", "Ceramic", "Indoor Plants", "Home Decor"],
+      "stockQuantity": 14,
+      "unitsSold": 35,
+      "launchDate": "2024-05-13T17:09:22.345Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/71PDS2VIDrL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71VPK-Bx98L._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71Qp-gs7fKL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71IT8HDDj5L._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/817xESfDw9S._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "Electric TV Stand",
+      "description": "Create a cozy ambiance in your living room with our Electric Fireplace TV Stand. Featuring a realistic flame effect and adjustable heat settings, it adds warmth and style to any space. The integrated media storage shelves provide ample space for your entertainment essentials.",
+      "features": [
+         "Electric fireplace with realistic flame effect",
+         "Adjustable heat settings",
+         "Media storage shelves",
+         "Sturdy construction",
+         "Easy assembly"
+      ],
+      "price": 7000,
+      "discount": 10,
+      "category": "Furniture",
+      "brand": "CozyHome",
+      "model": "CH-TV200",
+      "color": "Black",
+      "tags": ["Electronics", "TV Stand", "Furniture"],
+      "stockQuantity": 15,
+      "unitsSold": 12,
+      "launchDate": "2024-05-11T03:12:48.678Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/71S086jwtFL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81b+vo2HhIL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/810r3g9tdEL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71xQvY3LGHL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71JMlpxAicL._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "Pendant Ceiling Light",
+      "description": "Illuminate your space with our Modern Pendant Ceiling Light. Featuring a sleek design and adjustable hanging length, it adds a contemporary touch to any room. Whether used as a focal point or in a series, this pendant light enhances your home decor effortlessly.",
+      "features": [
+         "Sleek modern design",
+         "Adjustable hanging length",
+         "Easy to install",
+         "Durable construction",
+         "Provides ample lighting"
+      ],
+      "price": 20000,
+      "discount": 5,
+      "category": "Lighting",
+      "brand": "ModernLighting",
+      "model": "ML-PL300",
+      "color": "Black",
+      "tags": ["Ceiling Light", "Pendant Light", "Light", "Bulb", "Lighting"],
+      "stockQuantity": 25,
+      "unitsSold": 20,
+      "launchDate": "2024-05-01T09:56:34.123Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/61pFj2kP80L._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71hoe45h06L._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71hv1KoBWDL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71C57mGmKRL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71fS2izOGCL._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "Wood Chess Set",
+      "description": "Challenge your mind and add elegance to your space with our Classic Wood Chess Set. Crafted from high-quality wood, it features hand-carved pieces and a beautiful wooden board. Whether for casual games or display, this chess set is a timeless addition to your home.",
+      "features": [
+         "Handcrafted wooden pieces",
+         "Classic design",
+         "Includes wooden chessboard",
+         "Suitable for players of all ages",
+         "Easy to store"
+      ],
+      "price": 2000,
+      "discount": 0,
+      "category": "Home Decor",
+      "brand": "ClassicGames",
+      "model": "CG-CS100",
+      "color": "Wood",
+      "tags": ["Chess Set", "Wooden", "Classic", "Board Games", "Home Decor"],
+      "stockQuantity": 30,
+      "unitsSold": 25,
+      "launchDate": "2024-05-09T20:07:51.456Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/810TNphPcNL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71cIG2GGivL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71Qq8HH039L._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81b1lb2x51L._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71ZD-XtwsuL._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "Faux Fur Blanket",
+      "description": "Add texture and warmth to your space with our Faux Fur Throw Blanket. Made from ultra-soft faux fur, it's perfect for snuggling up on chilly evenings. Drape it over your sofa or bed for an instant touch of luxury and comfort.",
+      "features": [
+         "Luxurious faux fur material",
+         "Soft and cozy",
+         "Adds texture to your decor",
+         "Machine washable",
+         "Available in multiple colors"
+      ],
+      "price": 9000,
+      "discount": 8,
+      "category": "Bed",
+      "brand": "LuxuryLiving",
+      "model": "LL-BL200",
+      "color": "Gray",
+      "tags": ["Throw Blanket", "Blanket", "Bed"],
+      "stockQuantity": 40,
+      "unitsSold": 35,
+      "launchDate": "2024-05-05T11:14:29.789Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/71qVHh+ARlL._AC_SL1432_.jpg",
+         "https://m.media-amazon.com/images/I/81JHytM7sRL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81BJzTQoEiL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81nsMxMxOML._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81F8hi7BKxL._AC_SL1500_.jpg"
+      ]
+   },
+   {
+      "name": "Ceramic Vase Set",
+      "description": "Add a contemporary touch to your home decor with our Modern Ceramic Vase Set. Featuring sleek silhouettes and matte finishes, these vases complement a variety of styles. Arrange them together or separately to showcase fresh flowers or dried botanicals.",
+      "features": [
+         "Set of three ceramic vases",
+         "Modern design",
+         "Matte finish",
+         "Ideal for displaying flowers",
+         "Versatile use"
+      ],
+      "price": 15000,
+      "discount": 5,
+      "category": "Home Decor",
+      "brand": "UrbanDecor",
+      "model": "UD-VS300",
+      "color": "White",
+      "tags": ["Vase Set", "Ceramic", "Modern", "Home Decor", "Floral Display"],
+      "stockQuantity": 35,
+      "unitsSold": 30,
+      "launchDate": "2024-05-07T13:56:43.567Z",
+      "images": [
+         "https://m.media-amazon.com/images/I/71+K2WB572L._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71HYIrGdVZL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/71duAcVCGFL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/710+tp2fUsL._AC_SL1500_.jpg",
+         "https://m.media-amazon.com/images/I/81YOsOP6fwL._AC_SL1500_.jpg"
+      ]
+   }
+]

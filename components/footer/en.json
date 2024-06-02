@@ -1,0 +1,80 @@
+{
+   "copyright": "Copyright © LWSKart - All Right Reserved",
+   "desc": "Discover a world of stylish home decor at your fingertips. we offer quality products to enhance your living space. Shop with confidence and transform your home today",
+   "CustomerService": {
+      "title": "Service",
+      "ContactUs": {
+         "linkTitle": "Contact Us",
+         "href": "/contact"
+      },
+      "FAQ": {
+         "linkTitle": "FAQ",
+         "href": "/faq"
+      },
+      "ReturnPolicy": {
+         "linkTitle": "Return Policy",
+         "href": "/return-policy"
+      },
+      "ShippingInfo": {
+         "linkTitle": "Shipping Information",
+         "href": "/shipping-info"
+      }
+   },
+   "AboutUs": {
+      "title": "About Us",
+      "OurStory": {
+         "linkTitle": "Our Story",
+         "href": "/our-story"
+      },
+      "Careers": {
+         "linkTitle": "Careers",
+         "href": "/careers"
+      },
+      "PrivacyPolicy": {
+         "linkTitle": "Privacy Policy",
+         "href": "/privacy-policy"
+      },
+      "TermsOfService": {
+         "linkTitle": "Terms of Service",
+         "href": "/terms-of-service"
+      }
+   },
+   "Shop": {
+      "title": "Shop",
+      "NewArrivals": {
+         "linkTitle": "New Arrivals",
+         "href": "/new-arrivals"
+      },
+      "BestSellers": {
+         "linkTitle": "Best Sellers",
+         "href": "/best-sellers"
+      },
+      "Sales": {
+         "linkTitle": "Sales",
+         "href": "/sales"
+      },
+      "GiftCards": {
+         "linkTitle": "Gift Cards",
+         "href": "/gift-cards"
+      }
+   },
+   "connectUs": {
+      "title": "Connect",
+      "Facebook": {
+         "linkTitle": "Facebook",
+         "href": "https://www.facebook.com/lwskart"
+      },
+      "Instagram": {
+         "linkTitle": "Instagram",
+         "href": "https://www.instagram.com/lwskart"
+      },
+      "Twitter": {
+         "linkTitle": "Twitter",
+         "href": "https://www.twitter.com/lwskart"
+      },
+      "Pinterest": {
+         "linkTitle": "Pinterest",
+         "href": "https://www.pinterest.com/lwskart"
+      }
+   }
+}

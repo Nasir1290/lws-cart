@@ -1,0 +1,81 @@
+{
+   "copyright": "কপিরাইট © LWSKart - দ্বারা সর্বস্বত্ব সংরক্ষিত",
+   "desc": "আমাদের সেবা আপনার আঙুলের ডগায়। আমরা আপনার থাকার জায়গাকে উন্নত করার জন্য মানসম্পন্ন পণ্য অফার করি। আত্মবিশ্বাসের সাথে কেনাকাটা করুন এবং আজই আপনার বাড়িকে সাঝান",
+
+   "CustomerService": {
+      "title": "গ্রাহক সেবা",
+      "ContactUs": {
+         "linkTitle": "যোগাযোগ করুন",
+         "href": "/contact"
+      },
+      "FAQ": {
+         "linkTitle": "প্রশ্নাবলী",
+         "href": "/faq"
+      },
+      "ReturnPolicy": {
+         "linkTitle": "ফেরত নীতি",
+         "href": "/return-policy"
+      },
+      "ShippingInfo": {
+         "linkTitle": "শিপিং তথ্য",
+         "href": "/shipping-info"
+      }
+   },
+   "AboutUs": {
+      "title": "আমাদের সম্পর্কে",
+      "OurStory": {
+         "linkTitle": "আমাদের গল্প",
+         "href": "/our-story"
+      },
+      "Careers": {
+         "linkTitle": "ক্যারিয়ার",
+         "href": "/careers"
+      },
+      "PrivacyPolicy": {
+         "linkTitle": "গোপনীয়তা নীতি",
+         "href": "/privacy-policy"
+      },
+      "TermsOfService": {
+         "linkTitle": "সেবার শর্তাবলী",
+         "href": "/terms-of-service"
+      }
+   },
+   "Shop": {
+      "title": "কেনাকাটা",
+      "NewArrivals": {
+         "linkTitle": "নতুন আগমন",
+         "href": "/new-arrivals"
+      },
+      "BestSellers": {
+         "linkTitle": "সেরা বিক্রয়কারী",
+         "href": "/best-sellers"
+      },
+      "Sales": {
+         "linkTitle": "বিক্রয়",
+         "href": "/sales"
+      },
+      "GiftCards": {
+         "linkTitle": "উপহার কার্ড",
+         "href": "/gift-cards"
+      }
+   },
+   "connectUs": {
+      "title": "সংযুক্ত হোন",
+      "Facebook": {
+         "linkTitle": "ফেসবুক",
+         "href": "https://www.facebook.com/lwskart"
+      },
+      "Instagram": {
+         "linkTitle": "ইনস্টাগ্রাম",
+         "href": "https://www.instagram.com/lwskart"
+      },
+      "Twitter": {
+         "linkTitle": "টুইটার",
+         "href": "https://www.twitter.com/lwskart"
+      },
+      "Pinterest": {
+         "linkTitle": "পিন্টারেস্ট",
+         "href": "https://www.pinterest.com/lwskart"
+      }
+   }
+}

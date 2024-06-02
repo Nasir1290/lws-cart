@@ -1,0 +1,19 @@
+{
+   "createAnAccount": "CREATE AN ACCOUNT",
+   "registerForNewCustomer": "Register for new customer",
+   "fullName": "Full Name",
+   "emailAddress": "Email address",
+   "password": "Password",
+   "confirmPassword": "Confirm password",
+   "agreement": "I have read and agree to the",
+   "agreementLink": "terms & conditions",
+   "submit": "Create Account",
+   "creating": "Creating...",
+   "alreadyHaveAccount": "Already have account?",
+   "loginNow": "Login now",
+   "social": {
+      "orLoginWith": "Or login with",
+      "facebook": "Facebook",
+      "google": "Google"
+   }
+}
