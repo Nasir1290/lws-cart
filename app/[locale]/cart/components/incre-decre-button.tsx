@@ -8,26 +8,22 @@ import IncrementSubmit from './increment-submit'
 
 interface Props {
    quantity: number
-   stockQuantity: number
    productId: string
+   cartId: string
 }
 
 export default function IncreDecreButton({
    quantity,
-   stockQuantity,
    productId,
+   cartId,
 }: Props) {
    const handleIncrement = async () => {
-      if (stockQuantity > quantity) {
-         try {
-            await incrementDecrement
-               .bind(null, { action: 'increment', productId })
-               .call(null)
-         } catch (error: any) {
-            toast.error(error?.message || 'Failed to add quantity')
-         }
-      } else {
-         toast.error('The available quantity has been exceeded.')
+      try {
+         await incrementDecrement
+            .bind(null, { action: 'increment', productId, cartId })
+            .call(null)
+      } catch (error: any) {
+         toast.error(error?.message || 'Failed to add quantity')
       }
    }
 
@@ -35,7 +31,7 @@ export default function IncreDecreButton({
       if (quantity > 1) {
          try {
             await incrementDecrement
-               .bind(null, { action: 'decrement', productId })
+               .bind(null, { action: 'decrement', productId, cartId })
                .call(null)
          } catch (error: any) {
             toast.error(error?.message || 'Failed to remove quantity')

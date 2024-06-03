@@ -1,16 +1,18 @@
 import { Address } from '@/types/address'
+import { Lang_Profile } from '@/types/lang/profile'
 import Link from 'next/link'
 import { FaRegEdit } from 'react-icons/fa'
 
 interface Props {
    address?: Address
+   dict: Lang_Profile
 }
 
-export default function BillingAddress({ address }: Props) {
+export default function BillingAddress({ address, dict }: Props) {
    return (
       <div className="bg-amber-700/5 p-4 rounded-md">
          <div className="flex justify-between items-center mb-2">
-            <h3 className="text-lg font-semibold">Billing Address</h3>
+            <h3 className="text-lg font-semibold">{dict.billingAddress}</h3>
             <Link href="/edit/billing-address">
                <FaRegEdit className="text-lg" />
             </Link>
@@ -21,18 +23,18 @@ export default function BillingAddress({ address }: Props) {
             <p className="text-gray-600 bg-black/5">
                {address?.firstName && address?.lastName
                   ? address.firstName + ' ' + address.lastName
-                  : 'Name'}
+                  : dict.name}
             </p>
             <p className="text-gray-600">
                {address?.address && address.city && address.region
                   ? `${address.address}, ${address.city}, ${address.region}`
-                  : 'Address'}
+                  : dict.address}
             </p>
             <p className="text-gray-600 bg-black/5">
-               {address?.phone ? address.phone : 'Phone'}
+               {address?.phone ? address.phone : dict.phone}
             </p>
             <p className="text-gray-600">
-               {address?.email ? address.email : 'Email'}
+               {address?.email ? address.email : dict.email}
             </p>
          </div>
       </div>

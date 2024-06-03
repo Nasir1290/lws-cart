@@ -1,5 +1,4 @@
 import StarRating from '@/app/[locale]/product-details/components/star-rating'
-import { auth } from '@/auth'
 import { getCartlist } from '@/server-actions/get-cartlist'
 import { getWishlist } from '@/server-actions/get-wishlist'
 import { getComments } from '@/server-actions/getComments'
@@ -9,7 +8,6 @@ import { convertNumEnToBn } from '@/utils/convertNumEnToBn'
 import { makeShort } from '@/utils/makeShort'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaStar } from 'react-icons/fa'
 import { FiSearch } from 'react-icons/fi'
 
 import ProductCardAddToCart from './card-add-to-cart'
@@ -34,7 +32,7 @@ export default async function ProductCard({ product, locale }: Props) {
 
    const cartlistProducts = await getCartlist()
 
-   const isInCart = cartlistProducts.some((prod) => prod._id === product._id)
+   const isInCart = cartlistProducts.some((prod) => prod.product._id === product._id)
 
    const discountPrice =
       product && (product?.price * (100 - product?.discount)) / 100
@@ -99,6 +97,7 @@ export default async function ProductCard({ product, locale }: Props) {
             </div>
          </div>
          <ProductCardAddToCart
+         stockQuantity={product.stockQuantity}
             locale={locale}
             dict={dict.default}
             isInCart={isInCart}

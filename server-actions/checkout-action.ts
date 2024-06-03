@@ -4,8 +4,9 @@ import { auth } from '@/auth'
 import { generatePDFHtml } from '@/components/email/generate-pdf-html'
 import { getHtmlEmailTemplate } from '@/components/email/get-html-email-template'
 import { mongoConnect } from '@/db/mongo-connect'
+import { Cart } from '@/models/cart'
 import { User } from '@/models/user'
-import { T_User } from '@/types/user'
+import { Res_User, T_User } from '@/types/user'
 import { generateRandomInvoice } from '@/utils/generateRandomInvoice'
 import { addressSchema } from '@/zod/zod-schema'
 import { redirect } from 'next/navigation'
@@ -47,25 +48,31 @@ export const checkoutAction = async (prev: any, formData: FormData) => {
       const products = await getCartlist()
       const invoiceId = generateRandomInvoice(6)
       const order = {
-         products,
+         products: products.map((product) => ({
+            ...product.product,
+            productId: product.product._id,
+            _id: product._id,
+         })),
          shippingAddress: address,
          invoice: invoiceId,
          createdAt: new Date().toISOString(),
       }
 
       const totalAmount = products.reduce((prev, curr) => {
-         const discountPrice = (curr.price * (100 - curr.discount)) / 100
-         return prev + discountPrice * curr.quantity
+         const discountPrice =
+            (curr.product.price * (100 - curr.product.discount)) / 100
+         return prev + discountPrice * curr.product.quantity
       }, 0)
 
-      const newUser: T_User | null = await User.findOneAndUpdate(
+      const newUser: Res_User | null = await User.findOneAndUpdate(
          { email: session?.user.email },
          {
-            $set: { 'address.shippingAddress': address, cart: [] },
+            $set: { 'address.shippingAddress': address },
             $addToSet: { order },
          },
          { upsert: true, new: true },
       ).lean()
+      await Cart.deleteMany({ userId: newUser?._id.toString() })
       newOder = newUser?.order && newUser.order[newUser.order?.length - 1]
 
       const htmlString = generatePDFHtml({

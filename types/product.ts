@@ -47,6 +47,7 @@ export type Wishlist_Product = {
 
 export type Cartlist_Product = {
    _id: string
+   productId: string
    quantity: number
    name: string
    stockQuantity: number

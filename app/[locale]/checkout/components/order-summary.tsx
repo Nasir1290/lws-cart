@@ -1,10 +1,10 @@
 import FormError from '@/components/ui/form-error'
 import SubmitButton from '@/components/ui/submit-button'
-import { Cartlist_Product } from '@/types/product'
+import { C_Cart } from '@/types/cart'
 
 interface Props {
    totalPrice: number
-   products: Cartlist_Product[]
+   products: C_Cart[]
    error?: string
 }
 
@@ -17,20 +17,20 @@ export default function OrderSummary({ products, totalPrice, error }: Props) {
          <div className="space-y-2">
             {products.map((product) => {
                const discountPrice =
-                  (product.price * (100 - product.discount)) / 100
+                  (product.product.price * (100 - product.product.discount)) / 100
                return (
                   <div key={product._id} className="flex justify-between">
                      <div>
                         <h5 className="text-gray-800 font-medium">
-                           {product.name}
+                           {product.product.name}
                         </h5>
                         <p className="text-sm text-gray-600">
                            Price: BDT {Math.round(discountPrice)}
                         </p>
                      </div>
-                     <p className="text-gray-600">{`x${product.quantity}`}</p>
+                     <p className="text-gray-600">{`x${product.product.quantity}`}</p>
                      <p className="text-gray-800 font-medium">
-                        BDT {Math.round(product.quantity * discountPrice)}
+                        BDT {Math.round(product.product.quantity * discountPrice)}
                      </p>
                   </div>
                )

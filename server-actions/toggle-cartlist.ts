@@ -2,7 +2,10 @@
 
 import { auth } from '@/auth'
 import { mongoConnect } from '@/db/mongo-connect'
+import { Cart } from '@/models/cart'
+import { Product } from '@/models/product'
 import { User } from '@/models/user'
+import { T_Cart } from '@/types/cart'
 import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
 
@@ -29,27 +32,32 @@ export const toggleCartlist = async ({
          `/${locale}/login?_redirect=${path.split('/')[2] ? path.split('/')[2] : path.split('/')[1]}`,
       )
 
-   await mongoConnect()
-   if (isInCart) {
-      await User.findOneAndUpdate(
-         { email: session.user.email },
-         {
-            $pull: { cart: { productId } },
-         },
-      )
-   } else {
-      const product = await getSingleProduct(productId)
-      if (product?.stockQuantity && product.stockQuantity >= quantity) {
-         await User.findOneAndUpdate(
-            { email: session.user.email },
-            {
-               $addToSet: { cart: { quantity, productId } },
+   try {
+      await mongoConnect()
+      const userId = await User.exists({ email: session.user.email })
+      if (isInCart) {
+         const cartItem: T_Cart | null = await Cart.findOneAndDelete({
+            userId,
+            productId,
+         }).lean()
+         await Product.findByIdAndUpdate(productId, {
+            $inc: {
+               stockQuantity: cartItem?.quantity ? cartItem.quantity : quantity,
             },
-            { upsert: true },
-         )
+         })
       } else {
-         throw new Error(`Oops! Limited stock quantity`)
+         const product = await getSingleProduct(productId)
+         if (product?.stockQuantity && product.stockQuantity >= quantity) {
+            await Cart.create({ quantity, productId, userId })
+            await Product.findByIdAndUpdate(productId, {
+               $inc: { stockQuantity: -1 * quantity },
+            })
+         } else {
+            throw new Error(`Oops! Limited stock quantity`)
+         }
       }
+   } catch (error) {
+      throw new Error(`Oops! Server failed`)
    }
    revalidatePath(`/${locale}/cart`)
 }

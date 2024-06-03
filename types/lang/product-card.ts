@@ -3,4 +3,5 @@ export type Lang_ProductCard = {
    currency: string
    viewInCart: string
    adding: string
+   outOfStock: string
 }

@@ -17,11 +17,12 @@ export default async function Checkout({ params: { locale } }: Props) {
    const session = await auth()
    if (!session) redirect(`/${locale}/login?_redirect=checkout`)
    const products = await getCartlist()
-   if (products.length <= 0) redirect('/')
+   if (products.length <= 0) redirect(`/${locale}`)
    const address = await getAddress()
    const totalPrice = products.reduce((prev, curr) => {
-      const discountPrice = (curr.price * (100 - curr.discount)) / 100
-      return prev + discountPrice * curr.quantity
+      const discountPrice =
+         (curr.product.price * (100 - curr.product.discount)) / 100
+      return prev + discountPrice * curr.product.quantity
    }, 0)
 
    return (

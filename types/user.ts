@@ -8,10 +8,19 @@ export type T_User = {
    email: string
    password: string
    wishlist?: Types.ObjectId[]
-   cart?: {
-      productId: Types.ObjectId
-      quantity: number
-   }[]
+   address?: {
+      shippingAddress: Address
+      billingAddress: Address
+   }
+   order?: Order[]
+}
+
+export type Res_User = {
+   _id: Types.ObjectId
+   name: string
+   email: string
+   password: string
+   wishlist?: Types.ObjectId[]
    address?: {
       shippingAddress: Address
       billingAddress: Address

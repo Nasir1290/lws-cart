@@ -19,8 +19,11 @@ interface Props {
 
 export default async function Profile({ params: { locale } }: Props) {
    const session = await auth()
-
    if (!session) redirect(`/${locale}/login?_redirect=profile`)
+
+   const bangla = await import('./bn.json')
+   const english = await import('./en.json')
+   const dict = locale === 'bn' ? bangla : english
 
    const address = await getAddress()
 
@@ -32,7 +35,7 @@ export default async function Profile({ params: { locale } }: Props) {
                {/* Personal Information Section */}
                <section className="mb-8 bg-gray-700/5 p-4 rounded-md">
                   <h2 className="text-lg font-semibold mb-4">
-                     Personal Information
+                     {dict.personalInformation}
                   </h2>
                   <div className="flex space-x-4 mb-4">
                      <div>
@@ -54,23 +57,28 @@ export default async function Profile({ params: { locale } }: Props) {
                            {session?.user?.name}
                         </h2>
                         <p className="text-gray-600">{session?.user?.email}</p>
-                        <LogoutButton locale={locale} />
+                        <LogoutButton
+                           dict={dict.default.logout}
+                           locale={locale}
+                        />
                      </div>
                   </div>
                </section>
 
                <section className="mb-8">
-                  <h2 className="text-lg font-semibold mb-4">Addresses</h2>
+                  <h2 className="text-lg font-semibold mb-4">
+                     {dict.addresses}
+                  </h2>
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                     <BillingAddress address={address?.billingAddress} />
-                     <ShippingAddress address={address?.shippingAddress} />
+                     <BillingAddress dict={dict} address={address?.billingAddress} />
+                     <ShippingAddress dict={dict} address={address?.shippingAddress} />
                   </div>
                </section>
 
                <section>
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                     <ProfileCartlist />
-                     <ProfileWishlist />
+                     <ProfileCartlist dict={dict} />
+                     <ProfileWishlist dict={dict} />
                   </div>
                </section>
             </div>

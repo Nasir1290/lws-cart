@@ -1,0 +1,16 @@
+{
+   "personalInformation": "Personal Information",
+   "logout": "Logout",
+   "addresses": "Addresses",
+   "billingAddress": "Billing Address",
+   "shippingAddress": "Shipping Address",
+   "cart": "Cart",
+   "wishlist": "WishList",
+   "modify": "Modify",
+   "checkout": "Checkout",
+   "viewDetails": "View Details",
+   "name": "Name",
+   "address": "Address",
+   "phone": "Phone",
+   "email": "Email"
+}

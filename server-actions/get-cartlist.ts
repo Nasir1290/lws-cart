@@ -2,42 +2,36 @@
 
 import { auth } from '@/auth'
 import { mongoConnect } from '@/db/mongo-connect'
+import { Cart } from '@/models/cart'
 import { User } from '@/models/user'
-import { Cartlist_Product, Wishlist_Product } from '@/types/product'
+import { Res_Cart } from '@/types/cart'
 import { MongooseError } from 'mongoose'
-
-export type UserType = {
-   name: string
-   email: string
-   password: string
-   wishlist?: Wishlist_Product[]
-   cart?: {
-      productId: Wishlist_Product
-      quantity: number
-   }[]
-}
 
 export const getCartlist = async () => {
    const session = await auth()
    if (!session?.user) return []
    try {
       await mongoConnect()
-      const user: UserType | null = await User.findOne({
+      const userId = await User.exists({
          email: session?.user.email,
       })
+      const cartList: Res_Cart[] = await Cart.find({ userId })
          .populate({
-            path: 'cart.productId',
+            path: 'productId',
             select: '_id name stockQuantity price discount images',
          })
          .lean()
-      if (user?.cart) {
-         const products: Cartlist_Product[] = user.cart.map(
-            ({ productId, quantity }) => ({
-               ...productId,
-               quantity,
-               _id: productId._id.toString(),
-            }),
-         )
+      if (cartList.length > 0) {
+         const products = cartList.map((item) => ({
+            _id: item._id.toString(),
+            userId: item.userId.toString(),
+            product: {
+               ...item.productId,
+               _id: item.productId._id.toString(),
+               quantity: item.quantity,
+            },
+            updatedAt: item.updatedAt,
+         }))
          return products
       } else return []
    } catch (error) {

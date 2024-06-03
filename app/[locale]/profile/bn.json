@@ -1,0 +1,16 @@
+{
+   "personalInformation": "ব্যক্তিগত তথ্য",
+   "logout": "লগআউট",
+   "addresses": "ঠিকানা",
+   "billingAddress": "বিলিং ঠিকানা",
+   "shippingAddress": "শিপিং ঠিকানা",
+   "cart": "কার্ট",
+   "wishlist": "ইচ্ছেতালিকা",
+   "modify": "সংশোধন করুন",
+   "checkout": "চেকআউট",
+   "viewDetails": "বিস্তারিত দেখুন",
+   "name": "নাম",
+   "address": "ঠিকানা",
+   "phone": "ফোন",
+   "email": "ইমেইল"
+}

@@ -9,9 +9,9 @@
    "allCategories": "সকল ক্যাটাগরি",
    "header": {
       "search": "খুঁজুন",
-      "placeholder":"পণ্যের নাম লিখুন",
+      "placeholder": "পণ্যের নাম লিখুন",
       "account": "একাউন্ট",
       "cart": "কার্ট",
-      "wishlist": "পছন্দ তালিকা"
+      "wishlist": "ইচ্ছেতালিকা"
    }
 }

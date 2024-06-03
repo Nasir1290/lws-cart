@@ -6,9 +6,14 @@ import { ImSpinner2 } from 'react-icons/im'
 interface Props {
    isInCart: boolean
    dict: Lang_ProductCard
+   stockQuantity: number
 }
 
-export default function CardAddtocartSubmit({ isInCart,dict }: Props) {
+export default function CardAddtocartSubmit({
+   isInCart,
+   dict,
+   stockQuantity,
+}: Props) {
    const { pending } = useFormStatus()
 
    return isInCart ? (
@@ -18,7 +23,7 @@ export default function CardAddtocartSubmit({ isInCart,dict }: Props) {
       >
          {dict.viewInCart}
       </Link>
-   ) : (
+   ) : stockQuantity > 0 ? (
       <button
          disabled={pending}
          type="submit"
@@ -26,6 +31,14 @@ export default function CardAddtocartSubmit({ isInCart,dict }: Props) {
       >
          {pending && <ImSpinner2 className="animate-spin" />}
          {pending ? dict.adding : dict.addToCart}
+      </button>
+   ) : (
+      <button
+         disabled
+         type="button"
+         className="w-full rounded-b border border-gray-400 bg-gray-400 py-1  text-white transition hover:bg-transparent hover:text-gray-400 flex items-center justify-center gap-2"
+      >
+         {dict.outOfStock}
       </button>
    )
 }

@@ -13,6 +13,7 @@ interface Props {
    locale: Locale
    productId: string
    isInCart: boolean
+   stockQuantity:number
    dict: Lang_ProductCard
 }
 
@@ -21,6 +22,7 @@ export default function ProductCardAddToCart({
    isInCart,
    dict,
    locale,
+   stockQuantity
 }: Props) {
    const { status } = useSession()
    const pathname = usePathname()
@@ -46,7 +48,7 @@ export default function ProductCardAddToCart({
 
    return (
       <form action={clientAction}>
-         <CardAddtocartSubmit dict={dict} isInCart={isInCart} />
+         <CardAddtocartSubmit stockQuantity={stockQuantity} dict={dict} isInCart={isInCart} />
       </form>
    )
 }

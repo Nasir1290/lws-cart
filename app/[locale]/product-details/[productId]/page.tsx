@@ -46,7 +46,7 @@ export default async function ProductDetails({ params }: Props) {
 
    const cartlistProducts = await getCartlist()
    const isInCart = cartlistProducts.some(
-      (product) => product._id === params.productId,
+      (product) => product.product._id === params.productId,
    )
 
    const discountPrice =

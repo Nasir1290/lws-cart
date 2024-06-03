@@ -2,5 +2,6 @@
    "addToCart": "Add To Cart",
    "currency": "BDT",
    "viewInCart": "View In Cart",
-   "adding": "Adding..."
+   "adding": "Adding...",
+   "outOfStock": "Out of Stock"
 }

@@ -2,7 +2,7 @@ import { useFormStatus } from 'react-dom'
 import { ImSpinner2 } from 'react-icons/im'
 import { IoLogOutOutline } from 'react-icons/io5'
 
-export default function LogoutSubmitButton() {
+export default function LogoutSubmitButton({ dict }: { dict: string }) {
    const { pending } = useFormStatus()
 
    return (
@@ -18,7 +18,7 @@ export default function LogoutSubmitButton() {
             </>
          ) : (
             <>
-               <span>Logout</span>
+               <span>{dict}</span>
                <IoLogOutOutline className="text-lg" />
             </>
          )}

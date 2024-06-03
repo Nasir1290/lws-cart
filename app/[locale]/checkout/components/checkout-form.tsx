@@ -3,8 +3,8 @@
 import InputField from '@/components/ui/input-field'
 import { checkoutAction } from '@/server-actions/checkout-action'
 import { Address } from '@/types/address'
+import { C_Cart } from '@/types/cart'
 import { Locale } from '@/types/i18n'
-import { Cartlist_Product } from '@/types/product'
 import { useFormState } from 'react-dom'
 
 import OrderSummary from './order-summary'
@@ -12,7 +12,7 @@ import OrderSummary from './order-summary'
 interface Props {
    address?: Address
    totalPrice: number
-   products: Cartlist_Product[]
+   products: C_Cart[]
    locale: Locale
 }
 

@@ -23,6 +23,17 @@ const orderedProductSchema = new Schema<Cartlist_Product>({
    images: [String],
 })
 
+const cartSchema = new Schema(
+   {
+      productId: { type: Types.ObjectId, ref: 'Product' },
+      quantity: {
+         type: Number,
+         required: true,
+      },
+   },
+   { timestamps: true },
+)
+
 const schema = new Schema<T_User>(
    {
       name: {
@@ -38,12 +49,7 @@ const schema = new Schema<T_User>(
          required: true,
       },
       wishlist: [{ type: Types.ObjectId, ref: 'Product' }],
-      cart: [
-         {
-            productId: { type: Types.ObjectId, ref: 'Product' },
-            quantity: Number,
-         },
-      ],
+      cart: [cartSchema],
       address: {
          shippingAddress: addressSchema,
          billingAddress: addressSchema,
