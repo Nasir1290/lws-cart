@@ -26,21 +26,19 @@ export default async function Wishlist({ params }: Props) {
             {products.length > 0 ? (
                <div className="mx-auto space-y-4 max-w-6xl">
                   {products.map((product) => (
-                     <WishlistCard locale={params.locale} key={product._id} product={product} />
+                     <WishlistCard
+                        locale={params.locale}
+                        key={product._id}
+                        product={product}
+                     />
                   ))}
                </div>
             ) : (
-               <div className="flex items-center justify-center col-span-3 h-full">
-                  <div className="flex flex-col justify-center items-center gap-y-5 h-full">
-                     <Image
-                        className="w-20"
-                        src={folderIcon}
-                        alt="folder-icon"
-                     />
-                     <h2 className="text-2xl font-bold text-gray-500">
-                        Oops! Wishlist is Empty
-                     </h2>
-                  </div>
+               <div className="flex flex-col justify-center items-center gap-y-5 min-h-[calc(100vh-300px)]">
+                  <Image className="w-20" src={folderIcon} alt="folder-icon" />
+                  <h2 className="text-2xl font-bold text-gray-500">
+                     Oops! Wishlist is Empty
+                  </h2>
                </div>
             )}
          </div>

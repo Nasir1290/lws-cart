@@ -4,6 +4,7 @@ import { auth } from '@/auth'
 import { mongoConnect } from '@/db/mongo-connect'
 import { User } from '@/models/user'
 import { Cartlist_Product, Wishlist_Product } from '@/types/product'
+import { MongooseError } from 'mongoose'
 
 export type UserType = {
    name: string
@@ -40,6 +41,8 @@ export const getCartlist = async () => {
          return products
       } else return []
    } catch (error) {
-      return []
+      if (error instanceof MongooseError) {
+         throw new Error('Check your connection & refresh')
+      } else return []
    }
 }

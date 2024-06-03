@@ -46,20 +46,14 @@ export default async function Cart({ params: { locale } }: Props) {
                   </div>
                </>
             ) : (
-               <div className="flex items-center justify-center">
-                  <div className="flex flex-col justify-center items-center gap-y-5">
-                     <Image
-                        className="w-28"
-                        src={emptyCart}
-                        alt="folder-icon"
-                     />
-                     <h2 className="text-4xl font-bold text-gray-600">
-                        Cart is Empty!{' '}
-                        <Link className="text-primary" href={`/${locale}/shop`}>
-                           Shop Now
-                        </Link>
-                     </h2>
-                  </div>
+               <div className="flex flex-col justify-center items-center gap-y-5 min-h-[calc(100vh-300px)]">
+                  <Image className="w-20" src={emptyCart} alt="folder-icon" />
+                  <h2 className="text-2xl font-bold text-gray-500">
+                     Cart is Empty!{' '}
+                     <Link className="text-primary" href={`/${locale}/shop`}>
+                        Shop Now
+                     </Link>
+                  </h2>
                </div>
             )}
          </div>
