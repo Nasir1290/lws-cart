@@ -14,15 +14,18 @@ interface Props {
    categories: C_Category[]
    locale: Locale
    dict: Lang_Shop
+   isDrawer: boolean
 }
 
-export default function Sidebar({ categories, locale, dict }: Props) {
+export default function Sidebar({ categories, locale, dict, isDrawer }: Props) {
    const searchParams = useSearchParams()
    const paramsCategories = searchParams.getAll('category')
    const [activeCategories, setActiveCategories] = useState<string[]>([])
 
    return (
-      <div className="col-span-1 bg-white px-4 pb-6 shadow rounded overflow-hiddenb hidden md:block">
+      <div
+         className={`col-span-1 bg-white px-4 pb-6 shadow rounded overflow-hiddenb md:block ${!isDrawer && 'hidden'}`}
+      >
          <div className="divide-y divide-gray-200 space-y-5">
             {/* <ResetForm /> */}
             <div>

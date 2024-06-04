@@ -20,44 +20,48 @@ export const getAllProducts = async ({
    max_price,
    min_price,
 }: Props) => {
-   await mongoConnect()
+   try {
+      await mongoConnect()
 
-   const dbQuery: any = {}
+      const dbQuery: any = {}
 
-   if (query) {
-      const searchRegex = new RegExp(query, 'i')
-      dbQuery.$or = [
-         { name: searchRegex },
-         { category: searchRegex },
-         { tags: searchRegex },
-      ]
-   }
-
-   if (category) {
-      if (Array.isArray(category)) {
-         dbQuery.category = { $in: category.map((c) => new RegExp(c, 'i')) }
-      } else {
-         dbQuery.category = new RegExp(category, 'i')
+      if (query) {
+         const searchRegex = new RegExp(query, 'i')
+         dbQuery.$or = [
+            { name: searchRegex },
+            { category: searchRegex },
+            { tags: searchRegex },
+         ]
       }
-   }
 
-   if (color) {
-      if (Array.isArray(color)) {
-         dbQuery.color = { $in: color.map((c) => new RegExp(c, 'i')) }
-      } else {
-         dbQuery.color = new RegExp(color, 'i')
+      if (category) {
+         if (Array.isArray(category)) {
+            dbQuery.category = { $in: category.map((c) => new RegExp(c, 'i')) }
+         } else {
+            dbQuery.category = new RegExp(category, 'i')
+         }
       }
+
+      if (color) {
+         if (Array.isArray(color)) {
+            dbQuery.color = { $in: color.map((c) => new RegExp(c, 'i')) }
+         } else {
+            dbQuery.color = new RegExp(color, 'i')
+         }
+      }
+
+      if (min_price) {
+         dbQuery.price = { ...dbQuery.price, $gte: Number(min_price) }
+      }
+
+      if (max_price) {
+         dbQuery.price = { ...dbQuery.price, $lte: Number(max_price) }
+      }
+
+      const products: T_Product[] = await Product.find(dbQuery).lean()
+
+      return objectIdToString(products)
+   } catch (error) {
+      return []
    }
-
-   if (min_price) {
-      dbQuery.price = { ...dbQuery.price, $gte: Number(min_price) }
-   }
-
-   if (max_price) {
-      dbQuery.price = { ...dbQuery.price, $lte: Number(max_price) }
-   }
-
-   const products: T_Product[] = await Product.find(dbQuery).lean()
-
-   return objectIdToString(products)
 }
