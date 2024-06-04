@@ -1,10 +1,17 @@
 import { auth } from '@/auth'
 import { Locale } from '@/types/i18n'
+import { Metadata } from 'next'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
 
 import LoginForm from './components/login-form'
 import SocialLoginButton from './components/social-login-button'
+
+export const metadata: Metadata = {
+   title: 'Login to LWSKart - Your One-Stop Online Shop',
+   description:
+      'Login to LWSKart and access your account securely. Enjoy personalized recommendations, order tracking, and seamless checkout. Shop now for amazing deals and enjoy fast delivery!',
+}
 
 interface Props {
    params: {

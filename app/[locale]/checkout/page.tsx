@@ -3,9 +3,16 @@ import Breadcrumb from '@/components/ui/breadcrumb'
 import { getAddress } from '@/server-actions/get-address'
 import { getCartlist } from '@/server-actions/get-cartlist'
 import { Locale } from '@/types/i18n'
+import { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 
 import CheckoutForm from './components/checkout-form'
+
+export const metadata: Metadata = {
+   title: 'Checkout - Secure Payment - LWSKart',
+   description:
+      'Complete your purchase securely and efficiently at LWSKart. Enter your payment and shipping details to finalize your order. Shop with confidence and enjoy fast delivery!',
+}
 
 interface Props {
    params: {

@@ -4,9 +4,16 @@ import folderIcon from '@/public/assets/images/folder.png'
 import { getOrderList } from '@/server-actions/get-order-list'
 import { Locale } from '@/types/i18n'
 import { getDateFormat } from '@/utils/getDateFormat'
+import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
+
+export const metadata: Metadata = {
+   title: 'Order History - LWSKart',
+   description:
+      'View your order history and track the status of your purchases at LWSKart. Stay updated on delivery schedules and manage your shopping history conveniently.',
+}
 
 interface Props {
    params: {

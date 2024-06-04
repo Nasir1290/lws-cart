@@ -4,9 +4,16 @@ import folderIcon from '@/public/assets/images/folder.png'
 import { getAllProducts } from '@/server-actions/get-all-products'
 import { getCategories } from '@/server-actions/get-categories'
 import { Locale } from '@/types/i18n'
+import { Metadata } from 'next'
 import Image from 'next/image'
 
 import Sidebar from './components/sidebar'
+
+export const metadata: Metadata = {
+   title: 'Shop - Filter Products',
+   description:
+      'Explore a wide range of products available at LWSKart. Use advanced filtering, sorting, and searching features to find exactly what you need. Shop conveniently and discover new favorites.',
+}
 
 interface Props {
    searchParams: {

@@ -3,12 +3,19 @@ import Breadcrumb from '@/components/ui/breadcrumb'
 import emptyCart from '@/public/assets/images/empty-cart.png'
 import { getCartlist } from '@/server-actions/get-cartlist'
 import { Locale } from '@/types/i18n'
+import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import { FaChevronRight } from 'react-icons/fa6'
 
 import CartCard from './components/cart-card'
+
+export const metadata: Metadata = {
+   title: 'My Shopping Cart - LWSKart',
+   description:
+      'Review and manage items in your shopping cart at LWSKart. Easily add, remove, and update items before checkout. Shop conveniently and efficiently with LWSKart!',
+}
 
 interface Props {
    params: {

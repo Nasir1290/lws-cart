@@ -45,7 +45,7 @@ export async function generateMetadata(
          return {
             title: product.name,
             description: product.description,
-            generator: 'Next.js',
+            generator: 'LWSKart - Your One-Stop Online Shop',
             applicationName: 'LWSKart',
             referrer: 'origin-when-cross-origin',
             keywords: [
@@ -64,7 +64,7 @@ export async function generateMetadata(
                title: product.name,
                description: product.description,
                url: `https://shadhin-shop.vercel.app/en/product-details/${product._id}`,
-               siteName: 'Next.js',
+               siteName: 'LWSKart - Your One-Stop Online Shop',
                images: ogImages,
                locale: 'en_US',
                type: 'website',

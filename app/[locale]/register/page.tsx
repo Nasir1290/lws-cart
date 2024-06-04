@@ -1,10 +1,17 @@
 import { auth } from '@/auth'
 import { Locale } from '@/types/i18n'
+import { Metadata } from 'next'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
 
 import SocialLoginButton from '../login/components/social-login-button'
 import RegisterForm from './components/register-form'
+
+export const metadata: Metadata = {
+   title: 'Register at LWSKart - Your Ultimate Shopping Destination',
+   description:
+      'Create an account at LWSKart and unlock exclusive benefits. Enjoy personalized shopping experiences, special discounts, and priority access to new arrivals. Sign up now and start shopping!',
+}
 
 interface Props {
    params: {

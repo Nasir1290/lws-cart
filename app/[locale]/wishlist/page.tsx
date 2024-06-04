@@ -3,10 +3,17 @@ import Breadcrumb from '@/components/ui/breadcrumb'
 import folderIcon from '@/public/assets/images/folder.png'
 import { getWishlist } from '@/server-actions/get-wishlist'
 import { Locale } from '@/types/i18n'
+import { Metadata } from 'next'
 import Image from 'next/image'
 import { redirect } from 'next/navigation'
 
 import WishlistCard from './components/wishlist-card'
+
+export const metadata: Metadata = {
+   title: 'My Wishlist - LWSKart',
+   description:
+      'Create and manage your wishlist at LWSKart. Save your favorite items for later and never miss out on great deals. Start building your wishlist today and shop smarter!',
+}
 
 interface Props {
    params: {

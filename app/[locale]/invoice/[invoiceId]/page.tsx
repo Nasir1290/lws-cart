@@ -4,9 +4,70 @@ import { getSingleOrder } from '@/server-actions/getSingleOrder'
 import { Locale } from '@/types/i18n'
 import { convertNumEnToBn } from '@/utils/convertNumEnToBn'
 import { getDateFormat } from '@/utils/getDateFormat'
+import { Metadata, ResolvingMetadata } from 'next'
 import { redirect } from 'next/navigation'
 
 import InvoiceCard from './components/invoice-card'
+
+type MetadataProps = {
+   params: { invoiceId: string }
+}
+
+export async function generateMetadata(
+   { params }: MetadataProps,
+   parent: ResolvingMetadata,
+): Promise<Metadata> {
+   // fetch data
+   const parentMatadata = await parent
+   try {
+      const order = await getSingleOrder(params.invoiceId)
+      if (order) {
+         const description = order.products.reduce(
+            (prev, curr) => prev + ', ' + curr.name,
+            'Purchased Products are ',
+         )
+         const ogImages = order.products.map((product) => ({
+            url: product.images[0],
+            width: 800,
+            height: 600,
+         }))
+
+         return {
+            title: `Invoice - #${order.invoice}`,
+            description,
+            generator: 'LWSKart - Your One-Stop Online Shop',
+            applicationName: 'LWSKart',
+            referrer: 'origin-when-cross-origin',
+            keywords: description.split(' '),
+            openGraph: {
+               title: `Invoice - #${order.invoice}`,
+               description,
+               url: `https://shadhin-shop.vercel.app/en/invoice/${order._id}`,
+               siteName: 'LWSKart',
+               images: ogImages,
+               locale: 'en_US',
+               type: 'website',
+            },
+            icons: {
+               icon: '/assets/images/favicon/favicon-32x32.png',
+               shortcut: '/assets/images/favicon/favicon-16x16.png',
+               apple: '/assets/images/favicon/apple-touch-icon.png',
+            },
+         }
+      } else
+         return {
+            title: parentMatadata.title,
+            description: parentMatadata.description,
+            keywords: parentMatadata.keywords,
+         }
+   } catch (error) {
+      return {
+         title: parentMatadata.title,
+         description: parentMatadata.description,
+         keywords: parentMatadata.keywords,
+      }
+   }
+}
 
 interface Props {
    params: {
