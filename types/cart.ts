@@ -1,4 +1,4 @@
-import { Date, Types } from 'mongoose'
+import { Types } from 'mongoose'
 
 export type T_Cart = {
    userId: Types.ObjectId
@@ -18,8 +18,8 @@ export type Res_Cart = {
       images: string[]
    }
    quantity: number
-   createdAt: Date
-   updatedAt: Date
+   createdAt: string
+   updatedAt: string
 }
 
 export type C_Cart = {
@@ -34,5 +34,5 @@ export type C_Cart = {
       discount: number
       images: string[]
    }
-   updatedAt: Date
+   updatedAt: string
 }

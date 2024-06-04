@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import CartRemoveForm from './cart-remove-form'
+import ExpireTime from './expire-time'
 import IncreDecreButton from './incre-decre-button'
 
 interface Props {
@@ -14,7 +15,7 @@ interface Props {
 export default function CartCard({ product, locale }: Props) {
    const discountPrice =
       (product.product.price * (100 - product.product.discount)) / 100
-   console.log(product)
+
    return (
       <div className="flex items-center justify-between border gap-6 p-4 border-gray-200 rounded">
          <div className="relative w-28 h-20">
@@ -46,6 +47,7 @@ export default function CartCard({ product, locale }: Props) {
                      : 'Out of Stock'}
                </span>
             </p>
+            <ExpireTime updatedAt={product.updatedAt}/>
          </div>
          <IncreDecreButton
             cartId={product._id}

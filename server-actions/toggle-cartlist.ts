@@ -56,8 +56,8 @@ export const toggleCartlist = async ({
             throw new Error(`Oops! Limited stock quantity`)
          }
       }
-   } catch (error) {
-      throw new Error(`Oops! Server failed`)
+   } catch (error: any) {
+      throw new Error(error?.message || `Oops! Server failed`)
    }
    revalidatePath(`/${locale}/cart`)
 }

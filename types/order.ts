@@ -25,3 +25,19 @@ export type PDF_Order = {
    invoice: string
    createdAt: string
 }
+
+export type PDF_JSX_Order = {
+   products: {
+      productId: string
+      _id: string
+      quantity: number
+      name: string
+      stockQuantity: number
+      price: number
+      discount: number
+      images: string[]
+   }[]
+   shippingAddress: Address
+   invoice: string
+   createdAt: string
+}

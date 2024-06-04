@@ -10,7 +10,9 @@
    },
    "dependencies": {
       "@auth/mongodb-adapter": "^3.1.0",
+      "@fileforge/react-print": "^0.1.139",
       "@formatjs/intl-localematcher": "^0.5.4",
+      "@onedoc/client": "^0.1.33",
       "bcryptjs": "^2.4.3",
       "framer-motion": "^11.2.4",
       "html2canvas": "^1.4.1",

@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FaRegUser } from 'react-icons/fa6'
 
+import CartExpiryChecker from './cart-expiry-checker'
 import HeaderCartlistButton from './header-cartlist-button'
 import HeaderWishlistButton from './header-wishlist-button'
 import RefreshTokenHandler from './refresh-token-handler'
@@ -24,6 +25,7 @@ export default async function Header({ locale }: Props) {
       <header className="py-4 shadow-sm bg-white print:hidden">
          {/* Sign out if failed refreshed Token. */}
          <RefreshTokenHandler />
+         <CartExpiryChecker />
          <div className="container flex items-center justify-between">
             <Link href={`/${locale}`}>
                <Image src={logo} alt="Logo" className="w-32" />

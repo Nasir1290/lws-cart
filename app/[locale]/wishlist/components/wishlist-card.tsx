@@ -14,7 +14,7 @@ interface Props {
 
 export default async function WishlistCard({ product, locale }: Props) {
    const cartlistProducts = await getCartlist()
-   const isInCart = cartlistProducts.some((prod) => prod._id === product._id)
+   const isInCart = cartlistProducts.some((prod) => prod.product._id === product._id)
 
    return (
       <div className="flex items-center justify-between border gap-6 p-4 border-gray-200 rounded">
