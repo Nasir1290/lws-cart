@@ -49,14 +49,14 @@ export default async function Shop({ searchParams, params }: Props) {
       <>
          <Breadcrumb current="Shop" />
          <div className="container grid md:grid-cols-4 grid-cols-2 gap-6 pt-4 pb-16 items-start">
-            <Drawer>
+            {/* <Drawer>
                <Sidebar
                   dict={dict.default}
                   locale={params.locale}
                   categories={categories}
                   isDrawer={true}
                />
-            </Drawer>
+            </Drawer> */}
             <Sidebar
                isDrawer={false}
                dict={dict.default}
