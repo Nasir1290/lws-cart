@@ -5,7 +5,6 @@ import { mongoConnect } from '@/db/mongo-connect'
 import { Cart } from '@/models/cart'
 import { User } from '@/models/user'
 import { Res_Cart } from '@/types/cart'
-import { MongooseError } from 'mongoose'
 
 export const getCartlist = async () => {
    const session = await auth()
@@ -35,8 +34,6 @@ export const getCartlist = async () => {
          return products
       } else return []
    } catch (error) {
-      if (error instanceof MongooseError) {
-         throw new Error('Check your connection & refresh')
-      } else return []
+      return []
    }
 }

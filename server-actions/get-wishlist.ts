@@ -4,16 +4,14 @@ import { auth } from '@/auth'
 import { mongoConnect } from '@/db/mongo-connect'
 import { User } from '@/models/user'
 import { Wishlist_Product } from '@/types/product'
-import { MongooseError } from 'mongoose'
-
-import { UserType } from './get-cartlist'
+import { Res_Populate_Wishlist } from '@/types/user'
 
 export const getWishlist = async () => {
    const session = await auth()
    if (!session?.user) return []
    try {
       await mongoConnect()
-      const user: UserType | null = await User.findOne({
+      const user: Res_Populate_Wishlist | null = await User.findOne({
          email: session?.user.email,
       })
          .populate({
@@ -29,8 +27,6 @@ export const getWishlist = async () => {
          return products
       } else return []
    } catch (error) {
-      if (error instanceof MongooseError) {
-         throw new Error('Check your connection & refresh')
-      } else return []
+      return []
    }
 }

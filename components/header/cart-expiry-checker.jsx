@@ -9,7 +9,7 @@ export default function CartExpiryChecker() {
       }
 
       const intervalId = setInterval(() => {
-         startFetching()
+         startFetching().catch(() => {})
       }, 60000)
 
       return () => clearInterval(intervalId)

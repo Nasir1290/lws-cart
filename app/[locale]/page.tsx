@@ -1,4 +1,5 @@
 import { Locale } from '@/types/i18n'
+import { Metadata } from 'next'
 
 import AdsCard from './components/ads-card'
 import Features from './components/features'
@@ -11,6 +12,29 @@ interface Props {
    params: {
       locale: Locale
    }
+}
+
+export const metadata: Metadata = {
+   title: 'LWSKart - Your One-Stop Online Shop',
+   description:
+      'Welcome to LWSKart, your ultimate destination for online shopping. Explore a vast selection of products ranging from electronics and fashion to home essentials and gadgets. Shop now for amazing deals and enjoy fast delivery!',
+   keywords:
+      'online shopping, e-commerce, electronics, fashion, home essentials, gadgets, LWSKart, best deals, fast delivery',
+   openGraph: {
+      type: 'website',
+      url: 'https://shadhin-shop.vercel.app',
+      title: 'LWSKart - Your One-Stop Online Shop',
+      description:
+         'Discover a wide range of products at LWSKart. From electronics to fashion, home essentials to gadgets, we have it all. Shop now for great deals and fast delivery.',
+      images: [
+         {
+            url: 'https://shadhin-shop.vercel.app/assets/images/banner-bg.jpg',
+            width: 800,
+            height: 600,
+            alt: 'LWSKart',
+         },
+      ],
+   },
 }
 
 export default async function Home({ params: { locale } }: Props) {
