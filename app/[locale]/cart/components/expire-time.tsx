@@ -1,8 +1,18 @@
 'use client'
 
+import { Locale } from '@/types/i18n'
+import { Lang_Cart } from '@/types/lang/cart'
 import { useEffect, useRef, useState } from 'react'
 
-export default function ExpireTime({ updatedAt }: { updatedAt: string }) {
+export default function ExpireTime({
+   updatedAt,
+   dict,
+   locale,
+}: {
+   updatedAt: string
+   dict: Lang_Cart
+   locale: Locale
+}) {
    const [expiredIn, setExpiredIn] = useState<string>()
    const intervalId = useRef<NodeJS.Timeout | null>(null)
 
@@ -15,10 +25,13 @@ export default function ExpireTime({ updatedAt }: { updatedAt: string }) {
             parseInt(process.env.NEXT_PUBLIC_CART_EXPIRED_TIME!) * 60 * 1000
          if (willExpiredIn > current) {
             const date = new Date(willExpiredIn - current)
-            const clockFormate = date.toLocaleTimeString('en-US', {
-               minute: '2-digit',
-               second: '2-digit',
-            })
+            const clockFormate = date.toLocaleTimeString(
+               locale === 'bn' ? 'bn-BD' : 'en-US',
+               {
+                  minute: '2-digit',
+                  second: '2-digit',
+               },
+            )
             setExpiredIn(clockFormate)
          } else {
             setExpiredIn('Expired')
@@ -31,11 +44,12 @@ export default function ExpireTime({ updatedAt }: { updatedAt: string }) {
       return () => {
          clearInterval(intervalId.current as NodeJS.Timeout)
       }
-   }, [updatedAt])
+   }, [updatedAt, locale])
+
    return (
       expiredIn && (
          <p className="text-gray-500 text-sm">
-            Expired In :{' '}
+            {dict.expiredIn} :{' '}
             <span className={'font-medium text-primary'}>{expiredIn}</span>
          </p>
       )

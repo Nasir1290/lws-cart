@@ -63,7 +63,6 @@ export default function Checkbox({
          >
             {category.category}
          </label>
-         <div className="ml-auto text-gray-600 text-sm">(15)</div>
       </div>
    )
 }

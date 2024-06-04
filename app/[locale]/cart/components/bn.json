@@ -1,0 +1,10 @@
+{
+   "cart": "কার্ট",
+   "availability": "পর্যাপ্ততা",
+   "inStock": "পর্যাপ্ত আছে",
+   "outOfStock": "পর্যাপ্ত নেই",
+   "expiredIn": "মেয়াদ",
+   "expiredStatus": "মেয়াদ শেষ",
+   "currency": "৳",
+   "checkout": "চেকআউট"
+}

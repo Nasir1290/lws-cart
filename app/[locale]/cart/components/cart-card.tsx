@@ -1,5 +1,7 @@
 import { C_Cart } from '@/types/cart'
 import { Locale } from '@/types/i18n'
+import { Lang_Cart } from '@/types/lang/cart'
+import { convertNumEnToBn } from '@/utils/convertNumEnToBn'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -10,9 +12,10 @@ import IncreDecreButton from './incre-decre-button'
 interface Props {
    product: C_Cart
    locale: Locale
+   dict: Lang_Cart
 }
 
-export default function CartCard({ product, locale }: Props) {
+export default function CartCard({ product, locale, dict }: Props) {
    const discountPrice =
       (product.product.price * (100 - product.product.discount)) / 100
 
@@ -34,7 +37,7 @@ export default function CartCard({ product, locale }: Props) {
                {product.product.name}
             </Link>
             <p className="text-gray-500 text-sm">
-               Availability:{' '}
+               {dict.availability}:{' '}
                <span
                   className={
                      product.product.stockQuantity > 0
@@ -43,11 +46,11 @@ export default function CartCard({ product, locale }: Props) {
                   }
                >
                   {product.product.stockQuantity > 0
-                     ? `In Stock(${product.product.stockQuantity})`
-                     : 'Out of Stock'}
+                     ? `${dict.inStock}(${product.product.stockQuantity})`
+                     : dict.outOfStock}
                </span>
             </p>
-            <ExpireTime updatedAt={product.updatedAt}/>
+            <ExpireTime locale={locale} dict={dict} updatedAt={product.updatedAt} />
          </div>
          <IncreDecreButton
             cartId={product._id}
@@ -55,7 +58,8 @@ export default function CartCard({ product, locale }: Props) {
             quantity={product.product.quantity}
          />
          <div className="text-primary text-lg font-semibold">
-            BDT {discountPrice}
+            {dict.currency}{' '}
+            {locale === 'bn' ? convertNumEnToBn(discountPrice) : discountPrice}
          </div>
          <CartRemoveForm locale={locale} productId={product.product._id} />
       </div>

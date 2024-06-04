@@ -26,6 +26,10 @@ export default async function Wishlist({ params }: Props) {
    if (!session) redirect(`/${params.locale}/login?_redirect=wishlist`)
    const products = await getWishlist()
 
+   const bangla = await import('./components/bn.json')
+   const english = await import('./components/en.json')
+   const dict = params.locale === 'bn' ? bangla : english
+
    return (
       <>
          <Breadcrumb current="Wishlist" />
@@ -34,6 +38,7 @@ export default async function Wishlist({ params }: Props) {
                <div className="mx-auto space-y-4 max-w-6xl">
                   {products.map((product) => (
                      <WishlistCard
+                        dict={dict.default}
                         locale={params.locale}
                         key={product._id}
                         product={product}

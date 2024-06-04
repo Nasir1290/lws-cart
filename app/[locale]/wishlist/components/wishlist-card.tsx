@@ -1,6 +1,8 @@
 import { getCartlist } from '@/server-actions/get-cartlist'
 import { Locale } from '@/types/i18n'
+import { Lang_Wishlist } from '@/types/lang/wishlist'
 import { Wishlist_Product } from '@/types/product'
+import { convertNumEnToBn } from '@/utils/convertNumEnToBn'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -10,11 +12,14 @@ import RemoveForm from './remove-form'
 interface Props {
    product: Wishlist_Product
    locale: Locale
+   dict: Lang_Wishlist
 }
 
-export default async function WishlistCard({ product, locale }: Props) {
+export default async function WishlistCard({ product, locale, dict }: Props) {
    const cartlistProducts = await getCartlist()
-   const isInCart = cartlistProducts.some((prod) => prod.product._id === product._id)
+   const isInCart = cartlistProducts.some(
+      (prod) => prod.product._id === product._id,
+   )
 
    return (
       <div className="flex items-center justify-between border gap-6 p-4 border-gray-200 rounded">
@@ -34,7 +39,7 @@ export default async function WishlistCard({ product, locale }: Props) {
                {product.name}
             </Link>
             <p className="text-gray-500 text-sm">
-               Availability:{' '}
+               {dict.availability}:{' '}
                <span
                   className={
                      product.stockQuantity > 0
@@ -42,14 +47,16 @@ export default async function WishlistCard({ product, locale }: Props) {
                         : 'text-red-600'
                   }
                >
-                  {product.stockQuantity > 0 ? 'In Stock' : 'Out of Stock'}
+                  {product.stockQuantity > 0 ? dict.inStock : dict.outOfStock}
                </span>
             </p>
          </div>
          <div className="text-primary text-lg font-semibold">
-            ${product.price}
+            {dict.currency}
+            {locale === 'bn' ? convertNumEnToBn(product.price) : product.price}
          </div>
          <AddToCartForm
+            dict={dict}
             locale={locale}
             isInCart={isInCart}
             productId={product._id}

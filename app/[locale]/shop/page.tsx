@@ -29,6 +29,10 @@ interface Props {
 }
 
 export default async function Shop({ searchParams, params }: Props) {
+   const bangla = await import('./components/bn.json')
+   const english = await import('./components/en.json')
+   const dict = params.locale === 'bn' ? bangla : english
+
    const products = await getAllProducts({
       query: searchParams.query,
       category: searchParams.category,
@@ -312,7 +316,11 @@ export default async function Shop({ searchParams, params }: Props) {
             </div>
 
             {/* <!-- ./sidebar --> */}
-            <Sidebar locale={params.locale} categories={categories} />
+            <Sidebar
+               dict={dict.default}
+               locale={params.locale}
+               categories={categories}
+            />
 
             {products.length > 0 ? (
                <div className="col-span-3">

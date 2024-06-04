@@ -1,8 +1,9 @@
+import { Lang_Shop } from '@/types/lang/shop'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { ChangeEvent } from 'react'
 import toast from 'react-hot-toast'
 
-export default function PrizeRange() {
+export default function PrizeRange({ dict }: { dict: Lang_Shop }) {
    const searchParams = useSearchParams()
    const pathname = usePathname()
    const router = useRouter()
@@ -27,7 +28,9 @@ export default function PrizeRange() {
 
    return (
       <div className="pt-4">
-         <h3 className="text-gray-800 mb-3 uppercase font-medium">Price</h3>
+         <h3 className="text-gray-800 mb-3 uppercase font-medium">
+            {dict.price}
+         </h3>
          <div className="mt-4 flex items-center">
             <input
                type="text"
@@ -35,7 +38,7 @@ export default function PrizeRange() {
                id="min"
                defaultValue={searchParams.get('min_price') || ''}
                className="w-full border-gray-300 focus:border-primary rounded focus:ring-0 px-3 py-1 text-gray-600 shadow-sm"
-               placeholder="min"
+               placeholder={dict.min}
                onChange={handleChange}
             />
             <span className="mx-3 text-gray-500">-</span>
@@ -45,7 +48,7 @@ export default function PrizeRange() {
                id="max"
                defaultValue={searchParams.get('max_price') || ''}
                className="w-full border-gray-300 focus:border-primary rounded focus:ring-0 px-3 py-1 text-gray-600 shadow-sm"
-               placeholder="max"
+               placeholder={dict.max}
                onChange={handleChange}
             />
          </div>

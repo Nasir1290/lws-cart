@@ -1,4 +1,5 @@
 import { Locale } from '@/types/i18n'
+import { Lang_Shop } from '@/types/lang/shop'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { FaCheck } from 'react-icons/fa'
@@ -14,7 +15,13 @@ const colors = [
    { name: 'steel', value: '#B0C4DE' },
 ]
 
-export default function ColorFilter({ locale }: { locale: Locale }) {
+export default function ColorFilter({
+   locale,
+   dict,
+}: {
+   locale: Locale
+   dict: Lang_Shop
+}) {
    const [activeColors, setActiveColors] = useState<string[]>([])
    const searchParams = useSearchParams()
    const router = useRouter()
@@ -37,7 +44,9 @@ export default function ColorFilter({ locale }: { locale: Locale }) {
 
    return (
       <div className="pt-4">
-         <h3 className="text-gray-800 mb-3 uppercase font-medium">Color</h3>
+         <h3 className="text-gray-800 mb-3 uppercase font-medium">
+            {dict.color}
+         </h3>
          <div className="flex flex-wrap gap-2">
             {colors.map((color) => {
                const isActive = activeColors.some((c) => c === color.name)

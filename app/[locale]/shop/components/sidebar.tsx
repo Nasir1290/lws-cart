@@ -2,20 +2,21 @@
 
 import { C_Category } from '@/types/category'
 import { Locale } from '@/types/i18n'
+import { Lang_Shop } from '@/types/lang/shop'
 import { useSearchParams } from 'next/navigation'
 import { useState } from 'react'
 
 import Checkbox from './checkbox'
 import ColorFilter from './color-filter'
 import PrizeRange from './prize-range'
-import ResetForm from './reset-form'
 
 interface Props {
    categories: C_Category[]
    locale: Locale
+   dict: Lang_Shop
 }
 
-export default function Sidebar({ categories, locale }: Props) {
+export default function Sidebar({ categories, locale, dict }: Props) {
    const searchParams = useSearchParams()
    const paramsCategories = searchParams.getAll('category')
    const [activeCategories, setActiveCategories] = useState<string[]>([])
@@ -26,7 +27,7 @@ export default function Sidebar({ categories, locale }: Props) {
             {/* <ResetForm /> */}
             <div>
                <h3 className="text-gray-800 my-3 uppercase font-medium">
-                  Categories
+                  {dict.categories}
                </h3>
                <div className="space-y-2">
                   {categories?.map((category) => (
@@ -42,8 +43,8 @@ export default function Sidebar({ categories, locale }: Props) {
                </div>
             </div>
 
-            <PrizeRange />
-            <ColorFilter locale={locale} />
+            <PrizeRange dict={dict} />
+            <ColorFilter dict={dict} locale={locale} />
          </div>
       </div>
    )

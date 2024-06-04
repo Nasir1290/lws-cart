@@ -6,14 +6,16 @@ import { usePathname } from 'next/navigation'
 import toast from 'react-hot-toast'
 
 import AddToCartSubmit from './add-to-cart-submit'
+import { Lang_Wishlist } from '@/types/lang/wishlist'
 
 interface Props {
    productId: string
    isInCart: boolean
    locale: Locale
+   dict:Lang_Wishlist
 }
 
-export default function AddToCartForm({ productId, isInCart, locale }: Props) {
+export default function AddToCartForm({ productId, isInCart, locale,dict }: Props) {
    const pathname = usePathname()
    const updateAction = toggleCartlist.bind(null, {
       path: pathname,
@@ -34,7 +36,7 @@ export default function AddToCartForm({ productId, isInCart, locale }: Props) {
 
    return (
       <form action={clientAction}>
-         <AddToCartSubmit isInCart={isInCart} />
+         <AddToCartSubmit locale={locale} dict={dict} isInCart={isInCart} />
       </form>
    )
 }

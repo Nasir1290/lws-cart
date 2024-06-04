@@ -28,6 +28,10 @@ export default async function Cart({ params: { locale } }: Props) {
    if (!session) redirect(`/${locale}/login?_redirect=cart`)
    const products = await getCartlist()
 
+   const bangla = await import('./components/bn.json')
+   const english = await import('./components/en.json')
+   const dict = locale === 'bn' ? bangla : english
+
    return (
       <>
          <Breadcrumb current="Cart" />
@@ -37,6 +41,7 @@ export default async function Cart({ params: { locale } }: Props) {
                   <div className="mx-auto space-y-4 max-w-6xl">
                      {products.map((product) => (
                         <CartCard
+                        dict={dict.default}
                            locale={locale}
                            key={product._id}
                            product={product}
@@ -48,7 +53,7 @@ export default async function Cart({ params: { locale } }: Props) {
                         className="bg-primary px-4 py-2 text-white rounded flex items-center gap-2 hover:bg-primary/90"
                         href={`/${locale}/checkout`}
                      >
-                        Checkout <FaChevronRight />
+                        {dict.checkout} <FaChevronRight />
                      </Link>
                   </div>
                </>

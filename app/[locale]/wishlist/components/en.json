@@ -1,0 +1,9 @@
+{
+   "availability": "Availability",
+   "inStock": "In Stock",
+   "outOfStock": "Out of Stock",
+   "currency": "BDT",
+   "addToCart": "Add To Cart",
+   "viewInCart": "View In Cart",
+   "adding":"Adding..."
+}

@@ -1,0 +1,10 @@
+{
+   "cart": "Cart",
+   "availability": "Availability",
+   "inStock": "In Stock",
+   "outOfStock": "Out of Stock",
+   "expiredIn": "Expired In",
+   "expiredStatus": "Expired",
+   "currency": "BDT",
+   "checkout": "Checkout"
+}
