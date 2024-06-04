@@ -8,6 +8,7 @@ import { getWishlist } from '@/server-actions/get-wishlist'
 import { getComments } from '@/server-actions/getComments'
 import { Locale } from '@/types/i18n'
 import { convertNumEnToBn } from '@/utils/convertNumEnToBn'
+import { Metadata, ResolvingMetadata } from 'next'
 import { SiTicktick } from 'react-icons/si'
 
 import CommentList from '../components/comment-list'
@@ -18,6 +19,76 @@ import RatingAndComment from '../components/rating-comment'
 import RelatedProducts from '../components/related-products'
 import ShareOption from '../components/share-option'
 import StarRating from '../components/star-rating'
+
+type MetadataProps = {
+   params: { productId: string }
+}
+
+export async function generateMetadata(
+   { params }: MetadataProps,
+   parent: ResolvingMetadata,
+): Promise<Metadata> {
+   // fetch data
+   const parentMatadata = await parent
+
+   try {
+      const product = await getSingleProduct(params.productId)
+      if (product) {
+         const descriptionTags = product.description.split(' ')
+         const nameTags = product.name.split(' ')
+         const ogImages = product.images.map((image) => ({
+            url: image,
+            width: 800,
+            height: 600,
+         }))
+
+         return {
+            title: product.name,
+            description: product.description,
+            generator: 'Next.js',
+            applicationName: 'LWSKart',
+            referrer: 'origin-when-cross-origin',
+            keywords: [
+               ...product.tags,
+               product.brand,
+               product.category,
+               product.model,
+               ...nameTags,
+               ...descriptionTags,
+               ...product.features,
+            ],
+            authors: [{ name: product.brand }],
+            creator: product.brand,
+            publisher: product.brand,
+            openGraph: {
+               title: product.name,
+               description: product.description,
+               url: `https://shadhin-shop.vercel.app/en/product-details/${product._id}`,
+               siteName: 'Next.js',
+               images: ogImages,
+               locale: 'en_US',
+               type: 'website',
+            },
+            icons: {
+               icon: '/assets/images/favicon/favicon-32x32.png',
+               shortcut: '/assets/images/favicon/favicon-16x16.png',
+               apple: '/assets/images/favicon/apple-touch-icon.png',
+            },
+         }
+      } else
+         return {
+            title: parentMatadata.title,
+            description: parentMatadata.description,
+            keywords: parentMatadata.keywords,
+         }
+   } catch (error) {
+      return {
+         title: parentMatadata.title,
+         description: parentMatadata.description,
+         keywords: parentMatadata.keywords,
+      }
+   }
+}
 
 interface Props {
    params: {
