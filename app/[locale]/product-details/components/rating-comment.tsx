@@ -4,6 +4,7 @@ import SubmitButton from '@/components/ui/submit-button'
 import { addRatingComment } from '@/server-actions/add-rating-comment'
 import { Lang_Product_Details } from '@/types/lang/product-details'
 import { C_Review } from '@/types/review'
+import { useSession } from 'next-auth/react'
 import { usePathname } from 'next/navigation'
 import React, { useRef, useState } from 'react'
 import toast from 'react-hot-toast'
@@ -16,6 +17,7 @@ interface Props {
 }
 
 export default function RatingAndComment({ productId, comments, dict }: Props) {
+   const { status } = useSession()
    const [rating, setRating] = useState<number | null>(null)
    const [hoverRating, setHoverRating] = useState<number>(0)
    const formRef = useRef<HTMLFormElement>(null)
@@ -41,7 +43,11 @@ export default function RatingAndComment({ productId, comments, dict }: Props) {
          setRating(null)
          toast.success('Review added succesfully')
       } catch (error: any) {
-         toast.error(error?.message || 'Failed to add review')
+         if (status === 'unauthenticated') {
+            toast.error('Please Login first')
+         } else {
+            toast.error('Failed to add review')
+         }
       }
    }
 
