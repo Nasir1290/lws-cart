@@ -263,6 +263,7 @@ export default async function ProductDetails({
                      isInCart={isInCart}
                   />
                   <WishlistButton
+                     locale={params.locale}
                      dict={dict.default}
                      isWishlisted={isWishlisted}
                      productId={params.productId}

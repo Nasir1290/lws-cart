@@ -1,7 +1,9 @@
 'use client'
 
 import { toggleWishlist } from '@/server-actions/toggle-wishlist'
+import { Locale } from '@/types/i18n'
 import { Lang_Product_Details } from '@/types/lang/product-details'
+import { usePathname } from 'next/navigation'
 import toast from 'react-hot-toast'
 
 import WishlistSubmit from './wishlist-submit'
@@ -10,14 +12,19 @@ interface Props {
    productId: string
    isWishlisted: boolean
    dict: Lang_Product_Details
+   locale: Locale
 }
 
 export default function WishlistButton({
    productId,
    isWishlisted,
    dict,
+   locale,
 }: Props) {
+   const path = usePathname()
    const updateToogleAction = toggleWishlist.bind(null, {
+      locale,
+      path,
       productId,
       isWishlisted,
    })
