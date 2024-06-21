@@ -3,16 +3,33 @@
 import { auth } from '@/auth'
 import { mongoConnect } from '@/db/mongo-connect'
 import { User } from '@/models/user'
+import { Locale } from '@/types/i18n'
 import { revalidatePath } from 'next/cache'
+import { redirect } from 'next/navigation'
 
 interface Props {
    productId: string
    isWishlisted: boolean
+   locale: Locale
+   path: string
 }
 
-export const toggleWishlist = async ({ productId, isWishlisted }: Props) => {
+export const toggleWishlist = async ({
+   productId,
+   isWishlisted,
+   locale,
+   path,
+}: Props) => {
    const session = await auth()
-   if (!session?.user) return { message: 'Your session expired!' }
+   const redirectPath = path.split('/').reduce((prev, curr, i) => {
+      if (i !== 0) {
+         return prev + '/' + curr
+      } else return prev
+   }, '')
+   if (!session?.user)
+      redirect(
+         `/${locale}/login?_redirect=${redirectPath}&action=add-to-wishlist&actionid=${productId}`,
+      )
    const email = session.user.email
    await mongoConnect()
    if (isWishlisted) {

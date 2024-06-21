@@ -27,9 +27,15 @@ export const toggleCartlist = async ({
    locale,
 }: Props) => {
    const session = await auth()
+   const redirectPath = path.split('/').reduce((prev, curr, i) => {
+      if (i !== 0) {
+         return prev + '/' + curr
+      } else return prev
+   }, '')
+
    if (!session?.user)
       redirect(
-         `/${locale}/login?_redirect=${path.split('/')[2] ? path.split('/')[2] : path.split('/')[1]}`,
+         `/${locale}/login?_redirect=${redirectPath}&action=add-to-cart&actionid=${productId}`,
       )
 
    try {

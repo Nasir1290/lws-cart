@@ -6,9 +6,12 @@ import { getRelatedProducts } from '@/server-actions/get-related-products'
 import { getSingleProduct } from '@/server-actions/get-single-product'
 import { getWishlist } from '@/server-actions/get-wishlist'
 import { getComments } from '@/server-actions/getComments'
+import { toggleCartlist } from '@/server-actions/toggle-cartlist'
+import { toggleWishlist } from '@/server-actions/toggle-wishlist'
 import { Locale } from '@/types/i18n'
 import { convertNumEnToBn } from '@/utils/convertNumEnToBn'
 import { Metadata, ResolvingMetadata } from 'next'
+import { redirect } from 'next/navigation'
 import { SiTicktick } from 'react-icons/si'
 
 import CommentList from '../components/comment-list'
@@ -95,9 +98,16 @@ interface Props {
       productId: string
       locale: Locale
    }
+   searchParams: {
+      action: string
+      actionid: string
+   }
 }
 
-export default async function ProductDetails({ params }: Props) {
+export default async function ProductDetails({
+   params,
+   searchParams: { action, actionid },
+}: Props) {
    const bangla = await import('../components/bn.json')
    const english = await import('../components/en.json')
    const dict = params.locale === 'bn' ? bangla : english
@@ -122,6 +132,28 @@ export default async function ProductDetails({ params }: Props) {
 
    const discountPrice =
       product && (product?.price * (100 - product?.discount)) / 100
+
+   if (actionid) {
+      if (action === 'add-to-cart') {
+         await toggleCartlist({
+            isInCart: false,
+            locale: params.locale,
+            productId: actionid,
+            path: `/${params.locale}/product-details/${params.productId}`,
+            quantity: 1,
+         })
+         redirect(`/${params.locale}/product-details/${params.productId}`)
+      }
+      if (action === 'add-to-wishlist') {
+         await toggleWishlist({
+            isWishlisted: false,
+            locale: params.locale,
+            productId: actionid,
+            path: `/${params.locale}/product-details/${params.productId}`,
+         })
+         redirect(`/${params.locale}/product-details/${params.productId}`)
+      }
+   }
 
    return (
       <>

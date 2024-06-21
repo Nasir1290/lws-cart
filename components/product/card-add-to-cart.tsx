@@ -13,7 +13,7 @@ interface Props {
    locale: Locale
    productId: string
    isInCart: boolean
-   stockQuantity:number
+   stockQuantity: number
    dict: Lang_ProductCard
 }
 
@@ -22,7 +22,7 @@ export default function ProductCardAddToCart({
    isInCart,
    dict,
    locale,
-   stockQuantity
+   stockQuantity,
 }: Props) {
    const { status } = useSession()
    const pathname = usePathname()
@@ -41,14 +41,18 @@ export default function ProductCardAddToCart({
          if (status === 'authenticated') {
             toast.success('Added to cart successfully')
          }
-      } catch (error: any) {
-         toast.error(error?.message || 'Failed to add in cart')
+      } catch (error) {
+         toast.error('Failed to add in cart')
       }
    }
 
    return (
       <form action={clientAction}>
-         <CardAddtocartSubmit stockQuantity={stockQuantity} dict={dict} isInCart={isInCart} />
+         <CardAddtocartSubmit
+            stockQuantity={stockQuantity}
+            dict={dict}
+            isInCart={isInCart}
+         />
       </form>
    )
 }

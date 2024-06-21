@@ -34,7 +34,7 @@ export default async function Login({ params: { locale } }: Props) {
             </h2>
             <p className="text-gray-600 mb-6 text-sm">{dict.welcome}</p>
             <LoginForm dict={dict.default} locale={locale} />
-            <SocialLoginButton dict={dict.default.social} />
+            <SocialLoginButton locale={locale} dict={dict.default.social} />
             <p className="mt-4 text-center text-gray-600">
                {dict.dontHaveAccount}{' '}
                <Link href={`/${locale}/register`} className="text-primary">

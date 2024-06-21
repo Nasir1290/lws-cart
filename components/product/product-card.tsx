@@ -32,7 +32,9 @@ export default async function ProductCard({ product, locale }: Props) {
 
    const cartlistProducts = await getCartlist()
 
-   const isInCart = cartlistProducts.some((prod) => prod.product._id === product._id)
+   const isInCart = cartlistProducts.some(
+      (prod) => prod.product._id === product._id,
+   )
 
    const discountPrice =
       product && (product?.price * (100 - product?.discount)) / 100
@@ -60,6 +62,7 @@ export default async function ProductCard({ product, locale }: Props) {
                   <FiSearch />
                </Link>
                <ProductWishlistForm
+                  locale={locale}
                   productId={product._id}
                   isWishlisted={isWishlisted}
                />
@@ -97,7 +100,7 @@ export default async function ProductCard({ product, locale }: Props) {
             </div>
          </div>
          <ProductCardAddToCart
-         stockQuantity={product.stockQuantity}
+            stockQuantity={product.stockQuantity}
             locale={locale}
             dict={dict.default}
             isInCart={isInCart}

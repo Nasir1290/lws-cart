@@ -3,9 +3,12 @@ import Breadcrumb from '@/components/ui/breadcrumb'
 import folderIcon from '@/public/assets/images/folder.png'
 import { getAllProducts } from '@/server-actions/get-all-products'
 import { getCategories } from '@/server-actions/get-categories'
+import { toggleCartlist } from '@/server-actions/toggle-cartlist'
+import { toggleWishlist } from '@/server-actions/toggle-wishlist'
 import { Locale } from '@/types/i18n'
 import { Metadata } from 'next'
 import Image from 'next/image'
+import { redirect } from 'next/navigation'
 import { FaChevronLeft } from 'react-icons/fa6'
 
 import Drawer from './components/drawer'
@@ -24,6 +27,8 @@ interface Props {
       min_price: string
       max_price: string
       query: string
+      action: string
+      actionid: string
    }
    params: {
       locale: Locale
@@ -44,6 +49,28 @@ export default async function Shop({ searchParams, params }: Props) {
    })
 
    const categories = (await getCategories()) || []
+
+   if (searchParams.actionid) {
+      if (searchParams.action === 'add-to-cart') {
+         await toggleCartlist({
+            isInCart: false,
+            locale: params.locale,
+            productId: searchParams.actionid,
+            path: `/${params.locale}/shop`,
+            quantity: 1,
+         })
+         redirect(`/${params.locale}/shop`)
+      }
+      if (searchParams.action === 'add-to-wishlist') {
+         await toggleWishlist({
+            isWishlisted: false,
+            locale: params.locale,
+            productId: searchParams.actionid,
+            path: `/${params.locale}/shop`,
+         })
+         redirect(`/${params.locale}/shop`)
+      }
+   }
 
    return (
       <>

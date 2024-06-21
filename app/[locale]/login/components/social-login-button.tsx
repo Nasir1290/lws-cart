@@ -2,17 +2,28 @@
 
 import { signInGoogle } from '@/server-actions/siginin-google'
 import { signInFacebook } from '@/server-actions/signin-facebook'
+import { Locale } from '@/types/i18n'
 import { Lang_Social_login } from '@/types/lang/social-login'
 import { useSearchParams } from 'next/navigation'
 
 interface Props {
    dict: Lang_Social_login
+   locale: Locale
 }
 
-export default function SocialLoginButton({ dict }: Props) {
+export default function SocialLoginButton({ dict, locale }: Props) {
    const searchParams = useSearchParams()
-   const redirectParam = searchParams.get('_redirect')
-   const redirectTo = redirectParam ? `/${redirectParam}` : '/'
+   const _redirect = searchParams.get('_redirect')
+   const action = searchParams.get('action')
+   const actionid = searchParams.get('actionid')
+   const redirectTo = _redirect
+      ? action && actionid
+         ? `/${_redirect}?action=${action}&actionid=${actionid}`
+         : `/${_redirect}`
+      : action && actionid
+        ? `/${locale}?action=${action}&actionid=${actionid}`
+        : `/${locale}`
+
    const facebookSigninAction = signInFacebook.bind(null, redirectTo)
    const googleSigninAction = signInGoogle.bind(null, { redirectTo })
 

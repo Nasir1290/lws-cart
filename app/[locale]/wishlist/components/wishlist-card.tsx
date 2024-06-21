@@ -61,7 +61,7 @@ export default async function WishlistCard({ product, locale, dict }: Props) {
             isInCart={isInCart}
             productId={product._id}
          />
-         <RemoveForm productId={product._id} />
+         <RemoveForm locale={locale} productId={product._id} />
       </div>
    )
 }

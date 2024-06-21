@@ -1,5 +1,8 @@
+import { toggleCartlist } from '@/server-actions/toggle-cartlist'
+import { toggleWishlist } from '@/server-actions/toggle-wishlist'
 import { Locale } from '@/types/i18n'
 import { Metadata } from 'next'
+import { redirect } from 'next/navigation'
 
 import AdsCard from './components/ads-card'
 import Features from './components/features'
@@ -11,6 +14,10 @@ import TrendingProducts from './components/trending-products'
 interface Props {
    params: {
       locale: Locale
+   }
+   searchParams: {
+      action: string
+      actionid: string
    }
 }
 
@@ -37,10 +44,35 @@ export const metadata: Metadata = {
    },
 }
 
-export default async function Home({ params: { locale } }: Props) {
+export default async function Home({
+   params: { locale },
+   searchParams: { action, actionid },
+}: Props) {
    const bangla = await import('./components/bn.json')
    const english = await import('./components/en.json')
    const dict = locale === 'bn' ? bangla : english
+
+   if (actionid) {
+      if (action === 'add-to-cart') {
+         await toggleCartlist({
+            isInCart: false,
+            locale,
+            productId: actionid,
+            path: `/${locale}`,
+            quantity: 1,
+         })
+         redirect(`/${locale}`)
+      }
+      if (action === 'add-to-wishlist') {
+         await toggleWishlist({
+            isWishlisted: false,
+            locale,
+            productId: actionid,
+            path: `/${locale}`,
+         })
+         redirect(`/${locale}`)
+      }
+   }
 
    return (
       <>
