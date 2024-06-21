@@ -80,7 +80,8 @@ export default async function Invoice({
    params: { invoiceId, locale },
 }: Props) {
    const session = await auth()
-   if (!session) redirect(`/${locale}/login?_redirect=invoice/${invoiceId}`)
+   if (!session)
+      redirect(`/${locale}/login?_redirect=${locale}/invoice/${invoiceId}`)
    const bangla = await import('./components/bn.json')
    const english = await import('./components/en.json')
    const dict = locale === 'bn' ? bangla : english

@@ -25,7 +25,7 @@ interface Props {
 
 export default async function Cart({ params: { locale } }: Props) {
    const session = await auth()
-   if (!session) redirect(`/${locale}/login?_redirect=cart`)
+   if (!session) redirect(`/${locale}/login?_redirect=${locale}/cart`)
    const products = await getCartlist()
 
    const bangla = await import('./components/bn.json')
@@ -41,7 +41,7 @@ export default async function Cart({ params: { locale } }: Props) {
                   <div className="mx-auto space-y-4 max-w-6xl">
                      {products.map((product) => (
                         <CartCard
-                        dict={dict.default}
+                           dict={dict.default}
                            locale={locale}
                            key={product._id}
                            product={product}

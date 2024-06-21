@@ -23,7 +23,7 @@ interface Props {
 
 export default async function Orderlist({ params: { locale } }: Props) {
    const session = await auth()
-   if (!session) redirect('/login?_redirect=order-list')
+   if (!session) redirect(`/${locale}/login?_redirect=${locale}/order-list`)
    const orders = await getOrderList()
 
    return (

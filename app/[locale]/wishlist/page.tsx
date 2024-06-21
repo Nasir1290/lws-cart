@@ -23,7 +23,8 @@ interface Props {
 
 export default async function Wishlist({ params }: Props) {
    const session = await auth()
-   if (!session) redirect(`/${params.locale}/login?_redirect=wishlist`)
+   if (!session)
+      redirect(`/${params.locale}/login?_redirect=${params.locale}/wishlist`)
    const products = await getWishlist()
 
    const bangla = await import('./components/bn.json')

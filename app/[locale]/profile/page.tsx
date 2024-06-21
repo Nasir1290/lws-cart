@@ -69,7 +69,7 @@ interface Props {
 
 export default async function Profile({ params: { locale } }: Props) {
    const session = await auth()
-   if (!session) redirect(`/${locale}/login?_redirect=profile`)
+   if (!session) redirect(`/${locale}/login?_redirect=${locale}/profile`)
 
    const bangla = await import('./bn.json')
    const english = await import('./en.json')
