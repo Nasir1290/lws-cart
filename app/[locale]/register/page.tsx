@@ -36,7 +36,7 @@ export default async function Register({ params: { locale } }: Props) {
                {dict.registerForNewCustomer}
             </p>
             <RegisterForm locale={locale} dict={dict.default} />
-            <SocialLoginButton dict={dict.default.social} />
+            <SocialLoginButton locale={locale} dict={dict.default.social} />
             <p className="mt-4 text-center text-gray-600">
                {dict.alreadyHaveAccount}{' '}
                <Link href={`/${locale}/login`} className="text-primary">
