@@ -5,7 +5,7 @@ import { mongoConnect } from '@/db/mongo-connect'
 import { loginSchemaBn, loginSchemaEn } from '@/zod/zod-schema'
 import { redirect } from 'next/navigation'
 
-export const loginUser = async (prevState: any, formData: FormData) => {
+export const loginUser = async (prev: any, formData: FormData) => {
    const locale = formData.get('locale')?.toString()!
    const redirectTo = formData.get('redirectTo')?.toString() || `/${locale}`
 
