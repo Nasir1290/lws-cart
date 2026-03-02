@@ -1,1 +1,1 @@
-shadhin-shop=oxzi ldft hgc
+shadhin-shop=oxzi ldft hg
